@@ -1,0 +1,145 @@
+
+.link--selected{
+    background-color: #fff;
+    font-weight: 700;
+    cursor: default;
+  }
+  
+  .link--selected:hover{
+    transform: none;
+  }
+
+  .gallery__nav{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+  }
+  
+  .gallery__nav--link{
+    background-color: #7c7c7c2b;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: .7em;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: transform 0.1s ease;
+    cursor: pointer;
+  }
+  
+  .gallery__nav--link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.477);
+  }
+  
+  .link--selected{
+    background-color: var(--color-text-light);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.477);
+
+  }
+  
+  .link--selected:hover{
+    transform: none;
+  }
+  
+  .gallery__container{
+
+    max-width: 1200px; /* Ancho máximo para la galería */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .gallery__container .gallery__item{
+    height: 300px;
+    background-color: #7f7f7f;
+    border-radius: 16px ;
+  
+    cursor: wait;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    /* Añadir transición para el escalado */
+    transition: transform 0.5s ease-in-out, box-shadow 0.4s ease-in-out;
+    background-size: 100%; /* Tamaño inicial de la imagen */
+
+  }
+
+  .gallery__container .gallery__item:hover{
+   
+    /* Efecto hover: agrandar la imagen y añadir sombra */
+    transition: box-shadow 0.5s ease-in-out, background-size 0.4s ease-out;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.6);
+    
+    background-size: 103%; /* Escalado de la imagen */
+  }
+
+
+  .gallery__container .gallery__item {
+    /* Reducir más rápido al dejar de hacer hover */
+    transition: background-size 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+  }
+
+  .gallery__item h4{
+    color: var(--color-text-light);
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+    margin: 1px;
+    text-shadow: 0 0 20px var(--color-text-primary);
+  }
+
+  
+  .item__tags{
+    
+    display: flex;
+    gap: 1%;
+  }
+
+  .item__tags span{
+  
+    padding: 3px 10px;
+    border-radius: 50px;
+    background-color: #fff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.443);
+  }
+
+
+  @media (width <= 1024px) {
+
+    .gallery{
+      margin: auto 10px;
+
+    }
+    .gallery__container{
+      grid-template-columns: 1fr;
+      
+      
+    }
+
+    .gallery__container .gallery__item{
+      background-size: cover;
+    }
+
+    .gallery__container .gallery__item:hover{
+      background-size: cover; /* Escalado de la imagen */
+    }
+  }

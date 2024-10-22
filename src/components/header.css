@@ -1,0 +1,188 @@
+/* header.css */
+
+header {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 1%; 
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--color-background-primary);
+}
+
+.header__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+
+  border: none;
+  background-color: transparent;
+  
+  border-radius: 50%;
+  box-shadow: none;
+  
+  transition: 200ms ease;
+}
+
+.header__icons:hover, .header__icons:focus {
+  box-shadow: 0 0 10px var(--color);
+  transition: 300ms ease;
+  background-color: var(--color-background-primary);
+  transition: 300ms ease;
+}
+
+.header__icons:active {
+  background-color: transparent; 
+  transform: scale(110%);
+}
+
+
+.header__icons svg {
+  height: 20px;
+  fill: var(--color-background-secondary); /* Color del icono inicialmente */
+  transition: 300ms ease; /* Añadir una transición para suavizar el cambio de color */
+}
+
+.header__icons:hover svg, .header__icons.header__icons.active svg {
+  fill: var(--color-background-dark); /* Cambia el color del icono cuando se hace hover sobre el div */
+}
+
+
+.header__nav {
+  display: flex;
+  gap: 10px;
+  background-color: var(--color-background-secondary);
+  border: 0;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.header__nav:hover{
+  background-color: var(--color-background-terciary);
+  transition: 600ms ease;
+}
+
+.header__nav{
+  background-color: var(--color-background-secondary);
+  transition: 300ms ease;
+}
+
+.mv__menu{
+  display: none;
+}
+
+.dropdown__menu{
+  display: none;
+}
+
+.header__nav--link {
+  padding: 8px 12px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-size: 0.8em;
+  font-weight: 700;
+  width: auto;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.header__nav--link:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.296);
+}
+
+
+.header__nav--link a:hover{
+  background-color:var(--color-background-light);
+  color: var(--color-text-primary);
+  font-weight: 800;
+  cursor: default;
+}
+
+.selected{
+  background-color:var(--color-background-light);
+  color: var(--color-text-primary);
+  font-weight: 800;
+  cursor: default;
+}
+
+.selected:hover{
+  background-color:var(--color-background-light);
+  color: var(--color-text-primary);
+  
+}
+.dark--mode{
+  display: none;
+}
+
+
+@media (width <= 1024px) {
+  header {
+    padding: 4%;
+  }
+
+  .mv__menu{
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__icons {
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+    transition: 200ms ease;
+  }
+  
+  .dropdown{
+    position: relative;
+  }
+
+  .dropdown__menu{
+    width: 150px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--color-background-dark);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+
+  .dropdown__menu--link{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    color: var(--color-background-light);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown__menu--link:hover{
+    background-color: var(--color-background-terciary);
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  /* Ocultar el menú por defecto */
+.dropdown__menu.hide {
+  display: none;
+}
+
+/* Mostrar el menú cuando está abierto */
+.dropdown__menu.show {
+  display: block;
+}
+}

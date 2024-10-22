@@ -1,0 +1,118 @@
+
+.reactBanner{
+
+    height: 80vh;
+    margin: 10vh 0;
+    padding: 8vh 0;
+    background: linear-gradient(135deg, #23272f 0%, #52a9bc 100%);
+    display: grid;
+    justify-items: center;
+    align-content: center;
+  
+    color: white;
+  }
+  
+  .reactBanner__container{
+    
+    width: 1200px;
+    height: auto;
+  
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5%;
+  }
+
+
+  /* Animación para los párrafos */
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .reactBanner__container p{
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: 500;
+
+    opacity: 0;
+    animation: slideIn 1.5s forwards ease-in-out;
+  }
+
+  .reactBanner__container p:nth-child(1){
+    animation-delay: .8s;
+  }
+
+  .reactBanner__container p:nth-child(2){
+    animation-delay: 1s;
+  }
+
+  .reactBanner__container p:nth-child(3){
+    animation-delay: 1.2s;
+  }
+
+  .reactBanner__container p:nth-child(4){
+    animation-delay: 1.4s;
+  }
+  
+  .keyword{
+    text-decoration: underline;
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: 600;
+  
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .reactBanner__icon {
+    width: 100px; /* Puedes ajustar el tamaño según lo necesites */
+    animation: rotate 10s linear infinite;
+  }
+  
+  
+  @media (width <= 1024px){
+    
+    .reactBanner{
+      display:  flex;
+      flex-direction: column;
+      
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      padding: 10vh 40px;
+      margin-left: 0;
+  
+    }
+  
+    .reactBanner__container{
+      display:  flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .reactBanner h2{
+      line-height: 1em;
+    }
+  
+    .reactBanner__container p{
+      font-size: 18px;
+      line-height: 1.7em;
+     
+    }
+  }

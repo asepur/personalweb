@@ -1,0 +1,58 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-black-primary);
+    height: auto;
+    padding: 50px 0;
+    color: var(--color-text-light);
+  }
+  
+  
+  .footer__contact{
+    display: flex;
+    gap: 50px;
+    margin: 10px;
+  }
+  
+  .footer__contact--icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--color-text-light);
+    border-radius: 50px;
+  
+    box-shadow: none;
+    transition: 200ms ease;
+    cursor: pointer;
+  }
+  
+  .footer__contact--icons:hover, .footer__contact--icons:focus {
+    box-shadow: 0 0 10px var(--color-text-light);
+    transition: 300ms ease;
+  }
+
+  .footer__contact--icons:active{
+    box-shadow: 0 0 5px var(--color-light1); /* Sombra más suave para simular el click */
+    transition: 100ms ease;
+  }
+  
+  .footer__contact svg{
+    height: 20px;
+  }
+ 
+
+  /* Botones modo light */
+
+  .light-mode .button-icon{
+    border: 1px solid red;
+  }
+
+  .light-mode .button-icon:hover, .light-mode .button-icon:focus {
+    border: 2px solid var(--color-black-primary);
+    box-shadow:  0 0 10px var(--color-black-primary);
+  }

@@ -1,0 +1,56 @@
+/* Botón del menú desplegable y sus líneas */
+.dropdown__toggle {
+    width: 50px;
+    cursor: pointer;
+  }
+  
+  .dropdown__toggle div {
+    background: #0a0a0a;
+    height: 6px;
+    margin: 7px 0;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+  
+  /* Efecto del botón al hacer hover */
+  .dropdown__toggle:hover div:first-child {
+    transform: translateY(12px) rotate(135deg);
+  }
+  
+  .dropdown__toggle:hover div:nth-child(2) {
+    transform: scale(0);
+  }
+  
+  .dropdown__toggle:hover div:last-child {
+    transform: translateY(-12px) rotate(-135deg);
+  }
+  
+  /* Menú desplegable */
+  .dropdown__menu{
+    width: 150px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--color-background-dark);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  
+  .dropdown__menu.show {
+    display: block;
+  }
+  
+  .dropdown__menu--link {
+    display: block;
+    pad: 8px 16px;
+    color: var(--color-background-light);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown__menu--link:hover {
+    background-color: var(--color-hover);
+  }
+  

@@ -1,0 +1,27 @@
+/* Variables para light mode (por defecto) */
+
+:root {
+        --color-background-primary: #F2F2F2;  /* Fondo principal */
+        --color-background-secondary: #b4b4b4;
+        --color-background-terciary: #959393; /* Fondo secundario */
+        --color-background-light: #FEFEFE; /* Color de texto claro/blanco */
+        --color-background-dark: #262626;
+
+        
+        /* Colores de Texto */
+        --color-text-primary: #343237; /* Color de texto principal */
+        --color-text-secondary: #7b7b7b; /* Color de texto secundario */
+        --color-text-light: #FEFEFE; /* Color de texto claro/blanco */
+
+        --color-black-primary: #202020;
+        --color-black-secondary:rgb(161, 160, 160);
+}
+
+/* Variables para dark mode */
+
+[data-theme="dark"] {
+        
+        --color-text: #e0e0e0;
+        --color-primary: #bb86fc;
+        --color-secondary: #03dac6;
+}
