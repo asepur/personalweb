@@ -1,7 +1,6 @@
 
 .reactBanner{
 
-    height: 80vh;
     margin: 10vh 0;
     padding: 8vh 0;
     background: linear-gradient(135deg, #23272f 0%, #52a9bc 100%);
@@ -83,6 +82,31 @@
   .reactBanner__icon {
     width: 100px; /* Puedes ajustar el tamaño según lo necesites */
     animation: rotate 10s linear infinite;
+  }
+
+
+  .reactBanner--btn{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 12px 24px;
+    font-size: 24px;
+
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2%;
+    cursor: pointer;
+    transition: 150ms ease;
+  }
+
+  .reactBanner--btn:hover{
+    background-color: #ffffff59;
   }
   
   

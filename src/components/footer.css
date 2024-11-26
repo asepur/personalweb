@@ -5,8 +5,7 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: var(--color-black-primary);
-    height: auto;
-    padding: 50px 0;
+    padding-top: 50px;
     color: var(--color-text-light);
   }
   
@@ -55,4 +54,20 @@ footer{
   .light-mode .button-icon:hover, .light-mode .button-icon:focus {
     border: 2px solid var(--color-black-primary);
     box-shadow:  0 0 10px var(--color-black-primary);
+  }
+
+  @media (width <= 700px) {
+
+    footer{
+      text-align: center;
+    }
+
+    .footer__contact{
+      gap: 20px;
+    }
+
+    footer p{
+      max-width: 70%;
+    }
+
   }

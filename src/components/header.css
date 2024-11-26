@@ -127,9 +127,11 @@ header {
 }
 
 
-@media (width <= 1024px) {
+@media (width <= 700px) {
   header {
     padding: 4%;
+    display: flex;
+    justify-content:flex-start;
   }
 
   .mv__menu{

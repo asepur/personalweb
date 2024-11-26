@@ -36,12 +36,13 @@ function Gallery() {
           .map((project) => (
             <ProjectItem
               key={project.id}
-              title={project.title}
               tags={project.tags}
               image={project.image}
+              url={project.url}
             />
           ))}
       </section>
+
     </div>
   );
 }

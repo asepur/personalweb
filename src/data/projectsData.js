@@ -1,45 +1,51 @@
 const projectsData = [
     {
         id: 1,
-        title: "Tic Tac Toe Game",
         tags: ["React"],
-        image: "/public/img/tictactoe.webp"
+        image: "https://i.ibb.co/wYLTFzg/tres-en-raya.jpg",
+        url: "#"
     },
     {
         id: 2,
-        title: "Web Design",
-        tags: ["UX/UI", "Figma"],
-        image: "/public/img/webdesign1.webp"
+        tags: ["React", "Figma", "UX/UI"],
+        image: "https://i.ibb.co/qgbjTjY/eclothes.jpg",
+        url: "#"
     },
     {
         id: 3,
-        title: "Propuesta Rediseño Interfaz",
-        tags: ["UX/UI", "Figma"],
-        image: "/public/img/renault-mockup.webp"
+        tags: ["React"],
+        image: "https://i.ibb.co/51t08MJ/abstract.jpg",
+        url: "#"
     },
     {
         id: 4,
-        title: "Tomsent E-Commerce",
-        tags: ["Figma", "UX/UI"],
-        image: "/public/img/tomsent.webp"
+        tags: ["UX/UI", "Figma"],
+        image: "https://i.ibb.co/NnX8FpD/renault.jpg",
+        url: "https://www.figma.com/proto/sdZNQLREWnimbsJHoZh94m/ORGANIC?node-id=447-3&node-type=frame&t=wZldyj5QoVQeS4KQ-0&scaling=min-zoom&content-scaling=fixed&page-id=447%3A2"
     },
     {
         id: 5,
-        title: "Invitaciones de boda Harry Potter",
-        tags: ["Photoshop", "Illustrator"],
-        image: "/public/img/invitaciones2.webp"
+        tags: ["Figma", "UX/UI"],
+        image: "https://i.ibb.co/PNc7C6B/tomsent.webp",
+        url: "https://www.figma.com/proto/L9eeBr5ImruAxz4YKNGVrD/Untitled?node-id=4-96&t=vIzhLOGKr01ANPyO-1"
     },
     {
         id: 6,
-        title: "Tarjetas de visita",
         tags: ["Illustrator"],
-        image: "/public/img/coven.webp"
+        image: "https://i.ibb.co/44SfkZL/coven.webp",
+        url: "https://www.instagram.com/p/BoG1KwmjvpE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
     {
         id: 7,
-        title: "Invitaciones de Boda",
         tags: ["Photoshop", "Illustrator", "InDesign"],
-        image: "/public/img/invitaciones1.webp"
+        image: "https://i.ibb.co/SsQ0jyh/invitaciones1.webp",
+        url: "#"
+    },
+    {
+        id: 8,
+        tags: ["Photoshop", "Illustrator"],
+        image: "https://i.ibb.co/rGdHH7z/invitaciones2.webp",
+        url: "https://www.instagram.com/p/CuhpmoTsldv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     }
   ];
   

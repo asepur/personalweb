@@ -32,6 +32,7 @@
   
   .gallery__nav--link:hover {
     transform: scale(1.05);
+    background-color: #f2f2f2;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.477);
   }
   
@@ -45,6 +46,7 @@
   
   .link--selected:hover{
     transform: none;
+    background-color: var(--color-text-light);
   }
   
   .gallery__container{
@@ -62,7 +64,9 @@
     background-color: #7f7f7f;
     border-radius: 16px ;
   
-    cursor: wait;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
     
     background-size: cover;
     background-repeat: no-repeat;
@@ -84,7 +88,6 @@
     /* Efecto hover: agrandar la imagen y añadir sombra */
     transition: box-shadow 0.5s ease-in-out, background-size 0.4s ease-out;
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.6);
-    
     background-size: 103%; /* Escalado de la imagen */
   }
 
@@ -110,6 +113,10 @@
     gap: 1%;
   }
 
+  .item__tags:hover{
+    cursor: default;
+  }
+
   .item__tags span{
   
     padding: 3px 10px;
@@ -126,11 +133,11 @@
   @media (width <= 1024px) {
 
     .gallery{
-      margin: auto 10px;
+      padding: 0 20px;
 
     }
     .gallery__container{
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       
       
     }
@@ -143,3 +150,10 @@
       background-size: cover; /* Escalado de la imagen */
     }
   }
+
+  @media ( width <= 500px) {
+
+    .gallery__container{
+      grid-template-columns: 1fr;
+    }
+  } 
