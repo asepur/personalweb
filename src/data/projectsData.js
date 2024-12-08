@@ -3,19 +3,19 @@ const projectsData = [
         id: 1,
         tags: ["React"],
         image: "https://i.ibb.co/wYLTFzg/tres-en-raya.jpg",
-        url: "#"
+        url: "https://asepur-3enraya.netlify.app/"
     },
     {
         id: 2,
         tags: ["React", "Figma", "UX/UI"],
         image: "https://i.ibb.co/qgbjTjY/eclothes.jpg",
-        url: "#"
+        url: "https://asepur-eclothes.netlify.app/"
     },
     {
         id: 3,
         tags: ["React"],
         image: "https://i.ibb.co/51t08MJ/abstract.jpg",
-        url: "#"
+        url: "https://abstract-asepur.netlify.app/"
     },
     {
         id: 4,
