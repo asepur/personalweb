@@ -143,6 +143,8 @@ function Cv() {
               <h4>Skills</h4>
               <div className='cv__cargo--skills'>
                 <span>React</span>
+                <span>Next</span>
+                <span>Material UI</span>
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>SASS</span>
