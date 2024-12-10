@@ -47,7 +47,7 @@ function Footer() {
             </a>
             
           </div>
-          <p>Esta es la versión 1.00.00 de mi web personal, 100% React.js</p>
+          <p>Esta es la versión 1.1.00 de mi web personal, 100% React.js</p>
         
       </footer>
     );
