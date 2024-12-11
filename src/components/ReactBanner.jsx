@@ -26,7 +26,7 @@ function ReactBanner() {
               diseño <span className='keyword'>responsive</span> y optimización del rendimiento para mostrar un código claro y mantenible.
             </p>
             <p>
-              La versión <span className='keyword'>1.0.0</span> es un ejemplo real de cómo puedo crear aplicaciones dinámicas y personalizadas, 
+              La versión <span className='keyword'>1.1.0</span> es un ejemplo real de cómo puedo crear aplicaciones dinámicas y personalizadas, 
               aprovechando las mejores herramientas del ecosistema React, 
               desde el uso de <span className='keyword'>Context API</span> hasta la gestión de <span className='keyword'>localStorage</span>.
             </p>
