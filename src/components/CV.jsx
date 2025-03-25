@@ -36,26 +36,31 @@ function Cv() {
             </div>
             <h4>Principales responsabilidades</h4>
             <ul>
-              <li>
-                <strong>Diseño de interfaces de usuario</strong> para las nuevas iniciativas 
-                de contenido web, aplicando principios de diseño centrado en el usario.
+            <li>
+                <strong>Mockups visuales</strong> para mostrar con precisión el diseño en productos
+                de la tienda. Desde mi llegada, la producción diaria <strong>aumentó 100%</strong>, optimizando tiempos de entrega y presentación visual.
               </li>
               <li>
-                  Control y estudio del <strong>comportamiento del usuario</strong> en la web y el impacto de 
-                  las novedades implementadas.
-              </li>
-
-              <li>
-              Colaboración con desarrolladores en la <strong>implementación de diseños</strong>,
-              asegurando una comunicación clara entre las fases de diseño y desarrollo.
+                <strong>Análisis del comportamiento del usuario </strong> en la web mediante herramientas como Clarity, 
+                registrando y estudiando la actividad para medir el impacto de nuevas implementaciones en métricas clave
+                como permanencia y conversión.
               </li>
               <li>
-                <strong>Liderazgo del equipo</strong> en proyectos de diseño, incluyendo branding y campañas 
-                visuales que aumentaron el tráfico de usuarios.
+                <strong>Estructuración y expansión del departamento de diseño.</strong> Pasó de ser un apoyo a ventas
+                 a un área clave con procesos definidos. Implementé documentación de funciones y un sistema de 
+                 medición del trabajo, lo que permitió optimizar tareas, duplicar la productividad y asumir 
+                 nuevas responsabilidades estratégicas.
               </li>
-              <li>Diseño y rediseño de secciones de la web sin necesidad de desarrolladores</li>
-              <li>Diseño de carteles, calendarios y demás <strong>diseños corporativos</strong></li>
-              <li><strong>Tutelaje y formación de becarios</strong></li>
+              <li>
+                <strong>Colaboración interdisciplinaria </strong>con desarrollo para la implementación de mejoras en la web 
+                y con marketing en el diseño de campañas visuales, asegurando una comunicación fluida entre equipos 
+                y una ejecución eficiente de los proyectos.
+              </li>
+              <li>
+                <strong>Liderazgo del equipo</strong>, tutelaje y formación de becarios.
+              </li>
+              <li>Diseño y rediseño de secciones web, junto con la creación de elementos de branding como carteles y 
+                materiales corporativos, fortaleciendo la identidad visual de la empresa.</li>
             </ul>
           </div>
         <br />
