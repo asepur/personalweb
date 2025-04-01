@@ -7,9 +7,9 @@ const projectsData = [
     },
     {
         id: 2,
-        tags: ["React", "Figma", "UX/UI"],
-        image: "https://i.ibb.co/qgbjTjY/eclothes.jpg",
-        url: "https://asepur-eclothes.netlify.app/"
+        tags: ["UX/UI", "Figma"],
+        image: "https://i.ibb.co/1GfC9RWG/1.png",
+        url: "https://www.behance.net/gallery/222701735/UXUI-Review-Obsessive-Product-Page"
     },
     {
         id: 3,
@@ -24,12 +24,11 @@ const projectsData = [
         image: "https://i.ibb.co/G4s7Tsff/Headphones-Product-Page.jpg",
         url: "https://www.figma.com/proto/M0IdS5x4GH5nR31VOU8RR4/Sesiones-UI?node-id=203-2&p=f&t=SFMZJPZbvQkY15xp-0&scaling=min-zoom&content-scaling=fixed&page-id=1%3A4&starting-point-node-id=203%3A2"
     },
-
     {
         id: 5,
-        tags: ["UX/UI", "Figma"],
-        image: "https://i.ibb.co/NnZK60mh/Wireframe-1.jpg",
-        url: "https://www.figma.com/design/QUMQozY8uHCbNvDu6ESc3k/UX%2FUI-Excercise?node-id=0-1&p=f&t=Mq6x7BWGCsLN9Jtz-0"
+        tags: ["React", "Figma", "UX/UI"],
+        image: "https://i.ibb.co/qgbjTjY/eclothes.jpg",
+        url: "https://asepur-eclothes.netlify.app/"
     },
     {
         id: 6,
@@ -58,8 +57,8 @@ const projectsData = [
     {
         id: 10,
         tags: ["Photoshop", "Illustrator"],
-        image: "https://i.ibb.co/rGdHH7z/invitaciones2.webp",
-        url: "https://www.instagram.com/p/CuhpmoTsldv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        image: "https://i.ibb.co/67DKKptp/Invitaciones-de-Boda.png",
+        url: "https://www.behance.net/gallery/222703457/Invitaciones-de-Boda-Personalizadas"
     }
   ];
   
