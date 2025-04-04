@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
+
 .hero__container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
+    color: black;
+    opacity: 0;
   }
 
   .hero__container--img{
@@ -24,11 +29,16 @@
 .hero__container--name span{
   display: flex;
   justify-content: end;
-  font-size: 6em;
+  font-size: 4em;
   font-weight: 800;
   animation: slideIn 1s forwards ease-in-out;
-  opacity: 0;
+  opacity: 1;
+
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 .hero__container--name span:nth-child(1){
   margin-bottom: -5%;
@@ -36,11 +46,6 @@
 
 .hero__container--name  span:nth-child(2){
   animation-delay: .3s;
-}
-
-.hero__container--name  span:nth-child(3){
-  animation-delay: .6s;
-  margin-top: -5%;
 }
 
 @media (width <= 1200px) {
@@ -56,6 +61,7 @@
     margin: 10px;
     height: 60%;
     width: auto;
+    overflow: hidden;
   }
 
   .hero__container--name span{
