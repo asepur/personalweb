@@ -7,23 +7,16 @@
     align-items: center;
     height: 80vh;
     color: black;
-    opacity: 0;
   }
 
   .hero__container--img{
     width: 700px;
     margin-top: 5%;
-    animation: fadeIn 1s ease-in;
     animation: slideIn 1s forwards ease-in-out;
     margin-bottom: -5%;
-    opacity: 0;
+    opacity: 1;
   }
 
-  @keyframes fadeIn {
-    to{
-      opacity: 1;
-    }
-  }
 
 
 .hero__container--name span{
