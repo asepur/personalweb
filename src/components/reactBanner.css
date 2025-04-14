@@ -2,25 +2,41 @@
 .reactBanner{
 
     margin: 10vh 0;
-    padding: 8vh 0;
+    padding: 5% 10%;
     background: linear-gradient(135deg, #23272f 0%, #52a9bc 100%);
-    display: grid;
-    justify-items: center;
-    align-content: center;
+    display: flex;
+    grid-template-columns: 30% 70%;
+    gap: 10%;
   
     color: white;
   }
+
+  .reactBanner__hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .reactBanner__icon {
+    width: 200px; /* Puedes ajustar el tamaño según lo necesites */
+    animation: rotate 10s linear infinite;
+  }
   
   .reactBanner__container{
-    
-    width: 1200px;
-    height: auto;
-  
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 
 
@@ -62,30 +78,9 @@
     animation-delay: 1.4s;
   }
   
-  .keyword{
-    text-decoration: underline;
-    font-size: 18px;
-    line-height: 1.6em;
-    font-weight: 600;
-  
-  }
-  
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .reactBanner__icon {
-    width: 100px; /* Puedes ajustar el tamaño según lo necesites */
-    animation: rotate 10s linear infinite;
-  }
-
 
   .reactBanner--btn{
+    width: 300px;
     display: flex;
     gap: 12px;
     justify-content: center;
@@ -94,9 +89,10 @@
     border-radius: 8px;
     background-color: transparent;
     padding: 12px 24px;
-    font-size: 24px;
-
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    
     letter-spacing: 1.2px;
     color: #fff;
     text-decoration: none;
