@@ -57,7 +57,7 @@ const projectsData = [
     {
         id: 10,
         tags: ["Photoshop", "Illustrator"],
-        image: "https://i.ibb.co/67DKKptp/Invitaciones-de-Boda.png",
+        image: "https://i.ibb.co/rGdHH7z/invitaciones2.webp",
         url: "https://www.behance.net/gallery/222703457/Invitaciones-de-Boda-Personalizadas"
     }
   ];
