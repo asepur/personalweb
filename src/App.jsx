@@ -63,10 +63,9 @@ function App() {
               </div>
             </div>
           </div>
-
-          <ReactBanner />
         <div id='gallery'></div>
           <Gallery />
+          <ReactBanner />
         <div id='cv'></div>
           <CV />
       </section>
