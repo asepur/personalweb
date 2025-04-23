@@ -8,7 +8,7 @@ const projectsData = [
     {
         id: 2,
         tags: ["UX/UI", "Figma"],
-        image: "https://i.ibb.co/1GfC9RWG/1.png",
+        image: "https://i.ibb.co/5W24ScZV/obsessive-Portada.jpg",
         url: "https://www.behance.net/gallery/222701735/UXUI-Review-Obsessive-Product-Page"
     },
     {
