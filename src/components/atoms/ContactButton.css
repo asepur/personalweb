@@ -1,0 +1,47 @@
+.contact__button {
+    position: relative;
+    width: 100px;
+    z-index: 1;
+    background-color: var(--color-light-primary);
+    color: var(--color-dark-primary);
+    border-radius: 12px;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: visible;
+    border: none;
+  }
+  
+  .contact__button::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 18px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      #b75d5d 25%,
+      #ae3b3b 50%,
+      #632020 75%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    background-repeat: repeat;
+    animation: slide-bg 3s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes slide-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+  
+  

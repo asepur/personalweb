@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 80vh;
-    color: black;
+    color: var(--color-light-primary);
   }
 
   .hero__container--img{

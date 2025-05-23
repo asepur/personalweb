@@ -15,6 +15,19 @@
 
         --color-black-primary: #202020;
         --color-black-secondary:rgb(161, 160, 160);
+
+        --color-accent: #BD2A2A;
+        --color-dark-primary: #202020;
+        --color-dark-secondary: #414141;
+        --color-dark-terciary: #bfbfbf;
+        --color-light-primary: #F0EBEB;
+
+
+        --step-0: 1rem;     /* 16px */
+        --step-1: 1.25rem;  /* 20px */
+        --step-2: 1.5rem;   /* 24px */
+        --step-3: 2.25rem;  /* 36px */
+        --step-4: 3rem;     /* 48px */
 }
 
 /* Variables para dark mode */
@@ -25,3 +38,39 @@
         --color-primary: #bb86fc;
         --color-secondary: #03dac6;
 }
+
+
+h1 {
+        font-size: var(--step-4);
+        margin-bottom: 24px;
+        line-height: 1.2;
+      }
+
+h2 {
+        font-size: var(--step-3);
+        margin-bottom: var(--step-4);
+        line-height: 1.25;
+        text-align: center;
+
+      }
+
+h3 {
+        font-size: var(--step-2);
+        margin-bottom: 16px;
+        line-height: 1.3;
+
+}
+
+h4 {
+        font-size: var(--step-1);
+        margin-bottom: 8px;
+        line-height: 1.35;
+      }
+      
+p {
+        font-size: var(--step-0);
+        font-weight: 500;
+        margin-bottom: 16px;
+        line-height: 1.6;
+      }
+      

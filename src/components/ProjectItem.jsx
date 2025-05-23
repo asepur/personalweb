@@ -5,9 +5,11 @@ const ProjectItem = ({ tags, image, url }) => {
     return (
         <a href={url} target='_blank' rel='noopener noreferrer' className='gallery__item' style={{backgroundImage: `url(${image})`}}>
             <div className='item__tags'>
+                <h4>Título del proyecto</h4>
                 {tags.map((tag, index) => (
                     <span key={index}>{tag}</span>
                 ))}
+                
             </div>
             
         </a>

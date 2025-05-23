@@ -3,40 +3,30 @@
 
     margin: 10vh 0;
     padding: 5% 10%;
-    background: linear-gradient(135deg, #23272f 0%, #52a9bc 100%);
-    display: flex;
-    grid-template-columns: 30% 70%;
-    gap: 10%;
-  
-    color: white;
+    background-color: var(--color-dark-primary);
+    color: var(--color-light-primary);
   }
 
-  .reactBanner__hero{
+  .reactBanner__block{
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
   }
 
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  .reactBanner__img{
+      width: 500px;
+      height: auto;
+    
   }
   
-  .reactBanner__icon {
-    width: 200px; /* Puedes ajustar el tamaño según lo necesites */
-    animation: rotate 10s linear infinite;
-  }
-  
-  .reactBanner__container{
+  .reactBanner__info{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    gap: var(--step-1);
+    
   }
 
 
@@ -53,28 +43,24 @@
     }
   }
   
-  .reactBanner__container p{
-    font-size: 18px;
-    line-height: 1.6em;
-    font-weight: 500;
-
+  .reactBanner__info p{
     opacity: 0;
     animation: slideIn 1.5s forwards ease-in-out;
   }
 
-  .reactBanner__container p:nth-child(1){
+  .reactBanner__info p:nth-child(1){
     animation-delay: .8s;
   }
 
-  .reactBanner__container p:nth-child(2){
+  .reactBanner__info p:nth-child(2){
     animation-delay: 1s;
   }
 
-  .reactBanner__container p:nth-child(3){
+  .reactBanner__info p:nth-child(3){
     animation-delay: 1.2s;
   }
 
-  .reactBanner__container p:nth-child(4){
+  .reactBanner__info p:nth-child(4){
     animation-delay: 1.4s;
   }
   
@@ -135,4 +121,19 @@
       line-height: 1.7em;
      
     }
+
+    .reactBanner__block{
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--step-1);
+    }
+
+     .reactBanner__img{
+      width: 400px;
+      height: auto;
+    
+  }
   }

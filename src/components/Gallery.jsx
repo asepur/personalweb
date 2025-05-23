@@ -1,12 +1,13 @@
 import { useState } from 'react';
 
 import projectsData from '../data/projectsData';
-import ProjectItem from './ProjectItem';
+
+import ProjectCard from './ProjectCard.jsx'
 import './gallery.css';
 
 function Gallery() {
-  const categories = ['Todo', 'React', 'Figma', 'Photoshop', 'Illustrator', 'UX/UI'];
-  const [selectedCategory, setSelectedCategory] = useState('Todo');
+  const categories = ['Todos los filtros', 'React', 'Figma', 'Photoshop', 'Illustrator', 'UX/UI'];
+  const [selectedCategory, setSelectedCategory] = useState('Todos los filtros');
 
   const handleCategory = (category) => {
     setSelectedCategory(category);
@@ -32,14 +33,17 @@ function Gallery() {
 
       <section className="gallery__container">
         {projectsData
-          .filter((project) => selectedCategory === 'Todo' || project.tags.includes(selectedCategory))
+          .filter((project) => selectedCategory === 'Todos los filtros' || project.tags.includes(selectedCategory))
           .map((project) => (
-            <ProjectItem
+            <ProjectCard
               key={project.id}
+              title={project.title}
+              date={project.date}
               tags={project.tags}
               image={project.image}
               url={project.url}
             />
+            
           ))}
       </section>
 

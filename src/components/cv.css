@@ -1,17 +1,27 @@
 .cv{
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 4rem 2rem;
     max-width: 1200px;
 }
 
-.cv__cargo .cv__cargo--resume{
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.cv__cargo{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--step-2);
 }
 
-.cv__cargo .cv__cargo--resume svg{
-    height: 20px;
+.cv__cargo--info{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.cv__cargo .cv__cargo--info .cv__cargo--resume{
+    font-size: 1rem;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .cv__cargo--skills{
@@ -23,8 +33,8 @@
 .cv__cargo--skills span{
     padding: 3px 10px;
     border-radius: 50px;
-    background-color: #fff;
-  
+    background-color: var(--color-dark-terciary);
+    color: var(--color-dark-primary);
     font-size: 12px;
     font-weight: 600;
   
@@ -32,10 +42,21 @@
   
   }
 
+  .cv ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    li{
+      list-style: none;
+      
+    }
+  }
+
   .cv__work--case{
     border-radius: 16px;
     padding: 20px;
-    background-color: var(--color-text-light);
+    background-color: var(--color-dark-secondary);
     margin-top: 20px;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.443);
 
@@ -52,8 +73,7 @@
   .cv__estudios--box{
     border-radius: 10px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.393);
+    background-color: var(--color-dark-secondary);
     
   }
 
@@ -64,13 +84,13 @@
   .cv__estudios p{
     font-weight: 700;
     font-size: 14px;
-    color: var(--color-text-secondary);
+    color: var(--color-dark-terciary);
   }
 
   .cv__estudios--date{
     font-weight: 700;
     font-size: 12px;
-    color: var(--color-text-secondary);
+    color: var(--color-dark-terciary);
   }
 
 
