@@ -94,9 +94,8 @@
   }
 
 
-@media (width <= 700px){
+@media (width <= 768px){
   .cv{
-
     max-width: 500px;
   }
   

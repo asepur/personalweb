@@ -55,7 +55,7 @@ const tools = [
 
 const MyStacks = () => {
   return (
-    <section className="my-stacks">
+    <section className="stacks">
       <h2 className="title">Herramientas que impulsan mi flujo de trabajo</h2>
       <p className="subtitle">
         Un stack en constante evolución, enfocado en eficiencia, diseño intuitivo y desarrollo moderno.

@@ -3,17 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 :root {
   font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  
   width: 100%;
-  
-  margin: 0; /* Centra la galería */
+  margin: 0;
   height: 100vh;
-
-  background-color: var( --color-dark-primary);
-
+  background-color: var(--color-dark-primary);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,23 +16,21 @@
   color: var(--color-light-primary);
 }
 
-html{
-  scroll-behavior: smooth; /*hace el scroll más suave*/
+html {
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: 0;
 }
 
-.gallery, .stack, .cv, .studies{
+.gallery, .stack, .cv, .studies {
   margin-bottom: var(--step-4);
 }
 
-
-
-.my-stacks {
-  color:var(--color-light-primary);
-  padding: 2rem;
+.stacks {
+  color: var(--color-light-primary);
+  padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -46,21 +39,20 @@ body{
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-
 }
 
 .subtitle {
   font-size: 1rem;
   color: var(--color-light-primary);
   margin-bottom: 2rem;
-  
 }
 
 .tool-list {
   display: flex;
-  align-items: center; 
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .tool-card {
@@ -88,8 +80,7 @@ body{
 .tool-name {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 10px;
-  margin-top: 0;
+  margin: 0 0 10px 0;
 }
 
 .tool-description {
@@ -103,35 +94,7 @@ body{
   color: var(--color-light-primary);
 }
 
-
-@media (width >= 1024px){ /* Breakpoint desktop */
-
-
-  .tool-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .tool-icon {
-    width: 30px;
-  }
-
-  .tool-info p{
-    margin: 0;
-  }
-
-  .tool-card {
-    width: auto;
-  }
-
-}
-
-
-
-
-
-/* ESTILOS PROJECTCARD */
+/* ---------- PROJECTCARD BASE ---------- */
 
 .project__card {
   display: grid;
@@ -194,12 +157,39 @@ body{
   font-size: 0.75rem;
 }
 
-@media (width < 900px) {
-  .project__card {
-    grid-template-columns: 1fr;
+/* ---------- MEDIA QUERIES UNIFICADAS ---------- */
+
+/* BREACKPOINT Tablet*/
+@media (width >= 768px) {
+  /* Puedes añadir aquí los ajustes específicos para tablet si los necesitas */
+  .tool-list {
+    gap: 1.5rem;
+  }
+}
+
+/* BREACKPOINT Desktop*/
+
+@media (width >= 1024px) {
+  .tool-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .tool-icon {
+    width: 30px;
+  }
+
+  .tool-info p {
+    margin: 0;
+  }
+
+  .tool-card {
+    width: auto;
   }
 
   .project__card--image {
-    height: 200px;
+    height: 400px; /* Aumenta la altura para escritorio si quieres */
   }
 }

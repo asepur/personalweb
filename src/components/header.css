@@ -2,17 +2,16 @@
 
 header {
   display: flex;
-  justify-content:space-between;
-  align-items:center;
-  padding: 1%; 
-
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
   position: sticky;
   top: 0;
   z-index: 1;
   background-color: var(--color-dark-primary);
 }
 
-.header{
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,39 +23,35 @@ header {
   align-items: center;
   height: 40px;
   width: 40px;
-
   border: none;
   background-color: transparent;
-  
   border-radius: 50%;
   box-shadow: none;
-  
   transition: 200ms ease;
 }
 
-.header__icons:hover, .header__icons:focus {
+.header__icons:hover,
+.header__icons:focus {
   box-shadow: 0 0 10px var(--color);
-  transition: 300ms ease;
   background-color: var(--color-background-primary);
   transition: 300ms ease;
 }
 
 .header__icons:active {
-  background-color: transparent; 
+  background-color: transparent;
   transform: scale(110%);
 }
 
-
 .header__icons svg {
   height: 20px;
-  fill: var(--color-background-secondary); /* Color del icono inicialmente */
-  transition: 300ms ease; /* Añadir una transición para suavizar el cambio de color */
+  fill: var(--color-background-secondary);
+  transition: 300ms ease;
 }
 
-.header__icons:hover svg, .header__icons.header__icons.active svg {
-  fill: var(--color-background-dark); /* Cambia el color del icono cuando se hace hover sobre el div */
+.header__icons:hover svg,
+.header__icons.header__icons.active svg {
+  fill: var(--color-background-dark);
 }
-
 
 .header__nav {
   display: flex;
@@ -65,23 +60,19 @@ header {
   border: 0;
   border-radius: 50px;
   padding: 5px;
+  transition: 300ms ease;
 }
 
-.header__nav:hover{
+.header__nav:hover {
   background-color: var(--color-background-terciary);
   transition: 600ms ease;
 }
 
-.header__nav{
-  background-color: var(--color-background-secondary);
-  transition: 300ms ease;
-}
-
-.mv__menu{
+.mv__menu {
   display: none;
 }
 
-.dropdown__menu{
+.dropdown__menu {
   display: none;
 }
 
@@ -102,40 +93,38 @@ header {
   background-color: rgba(255, 255, 255, 0.296);
 }
 
-
-.header__nav--link a:hover{
-  background-color:var(--color-background-light);
+.header__nav--link a:hover {
+  background-color: var(--color-background-light);
   color: var(--color-text-primary);
   font-weight: 800;
   cursor: default;
 }
 
-.selected{
-  background-color:var(--color-background-light);
+.selected {
+  background-color: var(--color-background-light);
   color: var(--color-text-primary);
   font-weight: 800;
   cursor: default;
 }
 
-.selected:hover{
-  background-color:var(--color-background-light);
+.selected:hover {
+  background-color: var(--color-background-light);
   color: var(--color-text-primary);
-  
 }
-.dark--mode{
+
+.dark--mode {
   display: none;
 }
 
-
-@media (width <= 700px) {
+/* BREAKPOINTS Tablets */
+@media (width <= 768px) {
   header {
     padding: 4%;
-    display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
   }
 
-  .mv__menu{
-    display: flex; 
+  .mv__menu {
+    display: flex;
     width: 40px;
     height: 40px;
   }
@@ -149,14 +138,13 @@ header {
     border: none;
     border-radius: 50%;
     box-shadow: none;
-    transition: 200ms ease;
   }
-  
-  .dropdown{
+
+  .dropdown {
     position: relative;
   }
 
-  .dropdown__menu{
+  .dropdown__menu {
     width: 150px;
     position: absolute;
     top: 50px;
@@ -168,7 +156,7 @@ header {
     z-index: 100;
   }
 
-  .dropdown__menu--link{
+  .dropdown__menu--link {
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -178,19 +166,39 @@ header {
     transition: background-color 0.3s ease;
   }
 
-  .dropdown__menu--link:hover{
+  .dropdown__menu--link:hover {
     background-color: var(--color-background-terciary);
     border-radius: 8px;
     font-weight: 600;
   }
 
-  /* Ocultar el menú por defecto */
-.dropdown__menu.hide {
-  display: none;
+  .dropdown__menu.hide {
+    display: none;
+  }
+
+  .dropdown__menu.show {
+    display: block;
+  }
 }
 
-/* Mostrar el menú cuando está abierto */
-.dropdown__menu.show {
-  display: block;
-}
+/* BREACKPOINT Desktop*/
+@media (width >= 1024px) {
+  .header__nav {
+    gap: 20px;
+    padding: 10px 20px;
+  }
+
+  .header__nav--link {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .header__icons {
+    height: 50px;
+    width: 50px;
+  }
+
+  .header__icons svg {
+    height: 25px;
+  }
 }

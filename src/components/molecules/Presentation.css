@@ -1,0 +1,22 @@
+.presentation__container{
+
+  padding: 68px 40px;
+  margin-bottom: var(--step-4);
+}
+
+.box__container{
+  margin-top: 20px;
+  display: grid;
+  gap: 2rem;
+  
+}
+
+.box__container--content{
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+}
+
+.box__container--content .right{
+  border: 1px solid red;
+}

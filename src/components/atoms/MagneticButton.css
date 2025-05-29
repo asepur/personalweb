@@ -1,0 +1,66 @@
+.magnetic-button-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  width: fit-content;
+}
+
+/* Partículas detrás del botón */
+.particles-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -10;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.3s;
+
+}
+
+/* Botón por encima */
+.magnetic-button {
+  position: relative;
+  min-width: 160px;
+  padding: 12px 20px;
+  border: 2px solid var(--color-accent);
+  background: var(--color-dark-primary);
+  color: var(--color-light-primary);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: var(--step-0);
+  letter-spacing: 1pt;
+  
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.magnetic-button:hover {
+  background: var(--color-accent, #ddd6fe);
+}
+
+.magnetic-button .icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s;
+}
+
+.magnetic-button .icon.scale-up {
+  transform: scale(1.1);
+}

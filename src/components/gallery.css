@@ -59,7 +59,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 20px 0;
+    padding: 4rem 2rem;
   }
   
   .gallery__container .gallery__item{
@@ -103,15 +103,13 @@
   }
 
   .gallery__item h4{
-    color: var(--color-text-light);
+    color: var(--color-light-primary);
     font-size: 1.2em;
     margin: 1px;
-    text-shadow: 0 0 20px var(--color-text-primary);
   }
 
   
-  .item__tags{
-    
+  .item__tags{    
     display: flex;
     flex-direction: column;
     gap: 1%;
@@ -129,12 +127,20 @@
 
     font-size: 12px;
     font-weight: 600;
-
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.443);
   }
 
+  /* BREACKPOINT Tablet*/
 
-  @media (width <= 1024px) {
+   @media ( width <= 768px) {
+
+    .gallery__container{
+      grid-template-columns: 1fr;
+    }
+  } 
+
+  /* BREACKPOINT Desktop*/
+
+  @media (width >= 1024px) {
 
     .gallery{
       padding: 0 20px;
@@ -142,7 +148,6 @@
     }
     .gallery__container{
       grid-template-columns: 1fr 1fr;
-      
       
     }
 
@@ -155,9 +160,4 @@
     }
   }
 
-  @media ( width <= 500px) {
-
-    .gallery__container{
-      grid-template-columns: 1fr;
-    }
-  } 
+ 

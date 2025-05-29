@@ -2,7 +2,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 40px 20px;
+    padding: 4rem 2rem;
     color: var(--color-light-primary);
   }
 
@@ -41,32 +41,20 @@ footer{
   }
   
   .footer__links--icons:hover, .footer__links--icons:focus {
-    box-shadow: 0 0 10px var(--color-text-light);
+    box-shadow: 0 0 10px var(--color-light-primary);
     transition: 300ms ease;
   }
 
   .footer__links--icons:active{
-    box-shadow: 0 0 5px var(--color-light1); /* Sombra más suave para simular el click */
+    box-shadow: 0 0 5px var(--color-light-primary); /* Sombra más suave para simular el click */
     transition: 100ms ease;
   }
   
   .footer__links svg{
     height: 20px;
   }
- 
 
-  /* Botones modo light */
-
-  .light-mode .button-icon{
-    border: 1px solid red;
-  }
-
-  .light-mode .button-icon:hover, .light-mode .button-icon:focus {
-    border: 2px solid var(--color-black-primary);
-    box-shadow:  0 0 10px var(--color-black-primary);
-  }
-
-  @media (width >= 700px) {
+  @media (width >= 768px) {
 
     footer{
       display: flex;
@@ -75,7 +63,6 @@ footer{
       align-items: center;
       gap: 20px;
       background-color: var(--color-black-primary);
-      padding: 40px 20px;
       color: var(--color-text-light);
 
     }
