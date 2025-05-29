@@ -4,9 +4,7 @@ import './reactBanner.css';
 function ReactBanner() {
   
     return (
-        <section className='reactBanner'>
-
-         <div className='reactBanner__block'>
+        <section className='reactBanner reactBanner__block'>
             
             <img className='reactBanner__img' src="https://i.ibb.co/dJcY0gbN/react-img-1.png" alt="Me represento en una ilustración, flotando sobre pantallas de código e iterando entre diseño y desarrollo." />
          
@@ -36,10 +34,7 @@ function ReactBanner() {
             </a>
 
             </div>
-         </div>
 
-          
-          
         </section>
     );
 }
