@@ -97,8 +97,6 @@ body {
 /* ---------- PROJECTCARD BASE ---------- */
 
 .project__card {
-  display: grid;
-  grid-template-rows: 1.3fr .7fr;
   height: auto;
   text-decoration: none;
   color: inherit;
