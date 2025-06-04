@@ -1,3 +1,4 @@
+import MagneticButton from './atoms/MagneticButton';
 import './footer.css'
 
 function Footer() {
@@ -38,6 +39,8 @@ function Footer() {
                 ¿Impaciente por empezar un nuevo proyecto o necesitas mejorar lo que ya tienes? 
                 ¡Escríbeme con tu propuesta para que colaboremos! 
               </p>
+
+              <MagneticButton />
 
             </div>
           </div>

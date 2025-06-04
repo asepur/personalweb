@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import projectsData from '../data/projectsData';
+import projectsData from '../../data/projectsData.js';
 
-import ProjectCard from './ProjectCard.jsx'
+import ProjectCard from '../molecules/ProjectCard.jsx'
 import './gallery.css';
 
 function Gallery() {
@@ -16,6 +16,7 @@ function Gallery() {
   return (
     <div className='gallery'>
       <h2>Proyectos</h2>
+
       <nav>
         <ul className="gallery__nav">
           {categories.map((category) => (

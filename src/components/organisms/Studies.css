@@ -1,0 +1,51 @@
+.studies{
+    padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+  
+  .cv__estudios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+  }
+
+  .cv__estudios--box{
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--color-dark-secondary);
+    
+  }
+
+  .cv__estudios--box svg{
+    height: 40px;
+  }
+
+  .cv__estudios p{
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--color-dark-terciary);
+  }
+
+  .cv__estudios--date{
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--color-dark-terciary);
+  }
+
+
+@media (width <= 768px){
+  .cv{
+    max-width: 500px;
+  }
+  
+  .cv__estudios--box{
+        display: grid;
+        grid-template-columns: 10% 30% 30% 10%;
+        gap: 6%;
+        justify-content: center; 
+        align-items: center;
+        width: 100%;
+      }
+}

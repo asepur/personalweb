@@ -5,8 +5,10 @@ import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Presentation from './components/molecules/Presentation.jsx'
 import ReactBanner from './components/ReactBanner.jsx'
-import Gallery from './components/Gallery.jsx'
-import CV from './components/CV.jsx'
+import Gallery from './components/organisms/Gallery.jsx'
+import CV from './components/organisms/CV.jsx'
+import Skills from './components/organisms/Skills.jsx'
+import Studies from './components/organisms/Studies.jsx'
 import Footer from './components/Footer.jsx'
 import MyStacks from './components/MyStacks.jsx'
 
@@ -53,13 +55,16 @@ function App() {
         
         <div id='stack'></div>
         <MyStacks />
+        <Skills />
         
         <ReactBanner />
         <div id='cv'></div>
         <CV />
+        <Studies />
+        
 
       </section>
-      
+
       <div id='contact'></div>
       <Footer />
 

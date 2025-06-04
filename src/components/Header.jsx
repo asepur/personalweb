@@ -30,6 +30,7 @@ function Header() {
       const sections = [
         { id: 'home', offsetTop: homeSection.getBoundingClientRect().top },
         { id: 'gallery', offsetTop: gallerySection.getBoundingClientRect().top },
+        { id: 'skills', offsetTop: cvSection.getBoundingClientRect().top },
         { id: 'cv', offsetTop: cvSection.getBoundingClientRect().top },
         { id: 'contact', offsetTop: contactSection.getBoundingClientRect().top },
       ];
@@ -76,6 +77,13 @@ function Header() {
           onClick={() => handleLinkClick('cv')}
         >
           CV
+        </a>
+        <a 
+          href="#skills" 
+          className={`header__nav--link ${selectedLink === 'skills' ? 'selected' : ''}`}
+          onClick={() => handleLinkClick('skills')}
+        >
+          Skills
         </a>
         <a 
           href="#contact" 

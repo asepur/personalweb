@@ -1,0 +1,59 @@
+.skills {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.skills__group {
+  margin-bottom: var(--step-3);
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skills__item {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-light-primary);
+  background-color: var(--color-dark-secondary);
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Diferenciar soft skills si quieres darles otro estilo */
+.skills__list--soft .skills__item {
+  background-color: var(--color-dark-terciary);
+  color: var(--color-dark-primary);
+}
+
+/* Responsivo */
+@media (width > 768px) {
+  .skills {
+    padding: 6rem 4rem;
+  }
+
+  .skills__title {
+    text-align: left;
+  }
+
+  .skills__group {
+    margin-bottom: var(--step-4);
+  }
+
+  .skills__subtitle {
+    font-size: var(--step-2);
+  }
+
+  .skills__item {
+    font-size: 1rem;
+  }
+}
