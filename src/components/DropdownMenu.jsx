@@ -30,6 +30,7 @@ function DropdownMenu () {
                 <a href="#home" className='dropdown__menu--link'>Home</a>
                 <a href="#gallery" className='dropdown__menu--link'>Proyectos</a>
                 <a href="#cv" className='dropdown__menu--link'>CV</a>
+                <a href="#skills" className='dropdown__menu--link'>Skills</a>
                 <a href="#contact" className='dropdown__menu--link'>Contacto</a>
             </nav>
         </div>
