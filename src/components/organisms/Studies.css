@@ -12,9 +12,9 @@
   }
 
   .cv__estudios--box{
+    border: 2px solid var(--color-dark-secondary);
     border-radius: 10px;
     padding: 20px;
-    background-color: var(--color-dark-secondary);
     
   }
 

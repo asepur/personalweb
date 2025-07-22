@@ -1,7 +1,8 @@
 .project__card {
   height: auto;
   text-decoration: none;
-  color: inherit;
+
+  color: var(--color-light-primary);
   border: .5rem solid var(--color-dark-secondary);
   border-radius: 32px;
   background-color: var(--color-dark-secondary);
@@ -31,13 +32,13 @@
 }
 
 .project__card--title {
-  font-size: 1.5rem;
+  font-size: var(--step-2);
   margin: 0;
   color: var(--color-light-primary);
 }
 
 .project__card--date {
-  font-size: 0.875rem;
+  font-size: var(--step-1);
   color: var(--color-light-primary);
   margin: 0.5rem 0 1rem;
 }
@@ -54,7 +55,8 @@
   color: var(--color-dark-primary);
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: var(--step-0);
+  font-weight: 600;
 }
 
 /* BREACKPOINT Desktop*/

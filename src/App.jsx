@@ -38,7 +38,7 @@ function App() {
 
 
   return (
-    <>
+    <div className='app_container'>
       <Header/>
 
       <section className='content__container'>
@@ -64,10 +64,12 @@ function App() {
 
       </section>
 
-      <div id='contact'></div>
-      <Footer />
+      <div id='contact'>
+        <Footer />
+      </div>
+      
 
-    </>
+    </div>
   )
 }
 

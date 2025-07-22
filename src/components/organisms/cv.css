@@ -1,10 +1,10 @@
 .cv {
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  gap: var(--step-3);
+  gap: 2rem;
 }
 
 .cv__job{
@@ -15,14 +15,13 @@
   opacity: 0;
   transform: translateY(40px);
   animation: fadeInUp 0.6s ease-out forwards;
+  transition: 500ms ease;
+  display: grid;
+  gap: 1rem;
 }
 
-.cv__job--header{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--color-dark-secondary);
-  gap: 1rem;
+.cv__job:hover{
+  background-color: #2d2d2d;
 }
 
 .cv__job--meta{
@@ -48,7 +47,7 @@
   align-items: center;
   text-align: center;
   padding: 6px 14px;
-  font-size: 0.85rem;
+  font-size: var(--step-0);
   font-weight: 600;
   color: var(--color-light-primary);
   background-color: var(--color-dark-primary);
@@ -63,14 +62,7 @@
   animation-delay: 0.4s;
 }
 
-.cv__header {
-  margin-bottom: 1rem;
-}
 
-.cv__title {
-  font-size: var(--step-2);
-  font-weight: 700;
-}
 
 .cv__meta {
   display: flex;
@@ -88,22 +80,6 @@
   margin: 1rem 0;
 }
 
-.cv__skills span {
-  background-color: var(--color-dark-terciary);
-  color: var(--color-dark-primary);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cv__skills span:hover {
-  background-color: var(--color-accent);
-  transform: scale(1.05);
-}
-
 .cv__responsibilities {
   list-style: none;
   padding: 0;
@@ -116,6 +92,7 @@
 .cv__responsibilities li p {
   margin: 0;
   line-height: 1.5;
+  font-size: var(--step-0);
 }
 
 .cv__responsibilities strong {
@@ -154,22 +131,14 @@
 
 /* Responsive */
 @media (width >= 1200px) {
-  .cv {
-    padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  }
+  
 
   .cv__meta {
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  .cv__job--header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: var(--color-dark-secondary);
-  gap: 1rem;
-}
+  .cv__job{
+    padding: 4rem;
+  }
 }

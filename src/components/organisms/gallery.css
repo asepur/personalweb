@@ -1,4 +1,7 @@
-
+.gallery{
+  padding: 6rem 0rem;
+  height: auto;
+}
 
 .link--selected{
     background-color: var(--color-light-primary);
@@ -104,8 +107,7 @@
 
   .gallery__item h4{
     color: var(--color-light-primary);
-    font-size: 1.2em;
-    margin: 1px;
+    font-size: var(--step3);
   }
 
   
@@ -142,10 +144,6 @@
 
   @media (width >= 1024px) {
 
-    .gallery{
-      padding: 0 20px;
-
-    }
     .gallery__container{
       grid-template-columns: 1fr 1fr;
       
