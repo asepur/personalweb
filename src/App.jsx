@@ -10,7 +10,6 @@ import CV from './components/organisms/CV.jsx'
 import Skills from './components/organisms/Skills.jsx'
 import Studies from './components/organisms/Studies.jsx'
 import Footer from './components/Footer.jsx'
-import MyStacks from './components/MyStacks.jsx'
 
 
 import { useEffect} from 'react';
@@ -54,12 +53,12 @@ function App() {
         <Gallery />
         
         <div id='stack'></div>
-        <MyStacks />
         <Skills />
         
         <ReactBanner />
         <div id='cv'></div>
         <CV />
+        <div id='studies'></div>
         <Studies />
         
 

@@ -1,16 +1,11 @@
 footer{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 4rem 2rem;
+    gap: 2rem;
+    padding: 6rem 2rem;
     color: var(--color-light-primary);
   }
 
-  .footer__columns{
-    display: grid;
-    grid-template-columns: .5fr 1.5fr;
-    gap: var(--step-1);
-  }
 
   .footer__content{
     display: flex;

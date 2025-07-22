@@ -1,18 +1,33 @@
 import MagneticButton from './atoms/MagneticButton';
+import ScrollFloat from './atoms/ScrollFloat';
 import './footer.css'
 
 function Footer() {
 	return (
 
         <footer>
-          <h2>¿Tienes una idea? <br/>Compártela conmigo</h2>
-          
-          <div className='footer__columns'>
+          <h2><ScrollFloat
+               animationDuration={1}
+                ease='back.inOut(2)'
+                scrollStart='center bottom+=50%'
+                scrollEnd='bottom bottom-=40%'
+                stagger={0.03}
+              >
+                  Te espero
+              </ScrollFloat>
+          </h2>
+
             <div className='footer__content'>
-              
-              <p>Hola!</p>
-              
-              <div className='footer__links'>
+              <p>
+                ¿Impaciente por empezar un nuevo proyecto o necesitas mejorar lo que ya tienes? 
+                ¡Escríbeme con tu propuesta para que colaboremos! 
+              </p>
+
+              <MagneticButton />
+
+            </div>
+
+            <div className='footer__links'>
 
                 <a href="mailto:asepur94@gmail.com" target='_blank'>
                   <div className='footer__links--icons light-mode'>
@@ -30,20 +45,7 @@ function Footer() {
                   </div>
                 </a>
             
-              </div>
-
             </div>
-
-            <div className='footer__content'>
-              <p>
-                ¿Impaciente por empezar un nuevo proyecto o necesitas mejorar lo que ya tienes? 
-                ¡Escríbeme con tu propuesta para que colaboremos! 
-              </p>
-
-              <MagneticButton />
-
-            </div>
-          </div>
         
       </footer>
     );

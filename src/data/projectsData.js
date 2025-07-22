@@ -17,22 +17,6 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "Diseño Product Page",
-        date: "2023",
-        tags: ["React", "Figma", "UX/UI"],
-        image: "https://i.ibb.co/qgbjTjY/eclothes.jpg",
-        url: "https://asepur-eclothes.netlify.app/"
-    },
-    {
-        id: 4,
-        title: "Propuesta UI Renault",
-        date: "2022",
-        tags: ["UX/UI", "Figma"],
-        image: "https://i.ibb.co/NnX8FpD/renault.jpg",
-        url: "https://www.figma.com/proto/sdZNQLREWnimbsJHoZh94m/ORGANIC?node-id=447-3&node-type=frame&t=wZldyj5QoVQeS4KQ-0&scaling=min-zoom&content-scaling=fixed&page-id=447%3A2"
-    },
-    {
-        id: 5,
         title: "Diseño Interfaz Home",
         date: "2022",
         tags: ["Figma", "UX/UI"],
@@ -40,7 +24,7 @@ const projectsData = [
         url: "https://www.figma.com/proto/L9eeBr5ImruAxz4YKNGVrD/Untitled?node-id=4-96&t=vIzhLOGKr01ANPyO-1"
     },
     {
-        id: 6,
+        id: 4,
         title: "Tarjetas de Visita",
         date: "2018",
         tags: ["Illustrator"],
@@ -48,7 +32,7 @@ const projectsData = [
         url: "https://www.instagram.com/p/BoG1KwmjvpE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
     {
-        id: 7,
+        id: 5,
         title: "Invitaciones de Boda",
         date: "2023",
         tags: ["Photoshop", "Illustrator", "InDesign"],
@@ -56,7 +40,7 @@ const projectsData = [
         url: "#"
     },
     {
-        id: 8,
+        id: 6,
         title: "Invitaciones de Boda",
         date: "2022",
         tags: ["Photoshop", "Illustrator"],

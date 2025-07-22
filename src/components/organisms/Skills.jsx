@@ -1,10 +1,23 @@
 import './Skills.css'
+import ScrollFloat from '../atoms/ScrollFloat';
+import MyStacks from '../MyStacks.jsx'
 
 
 function Skills() {
 	return (
         <section className="skills" id="skills">
-            <h2>Skills</h2>
+            <h2><ScrollFloat
+                    animationDuration={1}
+                    ease='back.inOut(2)'
+                    scrollStart='center bottom+=50%'
+                    scrollEnd='bottom bottom-=40%'
+                    stagger={0.03}
+                  >
+                    Skills
+                  </ScrollFloat>
+            </h2>
+
+            <MyStacks />
 
             <div className="skills__group">
                 <h3>Diseño y Prototipado</h3>

@@ -86,6 +86,13 @@ function Header() {
           CV
         </a>
         <a 
+          href="#studies" 
+          className={`header__nav--link ${selectedLink === 'studies' ? 'selected' : ''}`}
+          onClick={() => handleLinkClick('studies')}
+        >
+          Formación
+        </a>
+        <a 
           href="#contact" 
           className={`header__nav--link ${selectedLink === 'contact' ? 'selected' : ''}`}
           onClick={() => handleLinkClick('contact')}

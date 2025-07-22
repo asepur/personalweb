@@ -1,9 +1,18 @@
 import './cv.css'
+import ScrollFloat from '../atoms/ScrollFloat';
 
 function Cv() {
   return (
     <section className="cv">
-      <h2>Experiencia Laboral</h2>
+      <h2><ScrollFloat
+                          animationDuration={1}
+                          ease='back.inOut(2)'
+                          scrollStart='center bottom+=50%'
+                          scrollEnd='bottom bottom-=40%'
+                          stagger={0.03}
+                        >
+                          Experiencia Laboral
+                        </ScrollFloat></h2>
 
       <article className="cv__job">
         <header className="cv__job--header">

@@ -1,7 +1,10 @@
 .skills {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+
 }
 
 
@@ -34,6 +37,12 @@
   background-color: var(--color-dark-terciary);
   color: var(--color-dark-primary);
 }
+
+.stacks{
+  display: grid;
+  gap: 1rem;
+}
+
 
 /* Responsivo */
 @media (width > 768px) {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import projectsData from '../../data/projectsData.js';
+import ScrollFloat from '../atoms/ScrollFloat';
 
 import ProjectCard from '../molecules/ProjectCard.jsx'
 import './gallery.css';
@@ -15,7 +16,19 @@ function Gallery() {
 
   return (
     <div className='gallery'>
-      <h2>Proyectos</h2>
+      
+
+      
+
+      <h2><ScrollFloat
+        animationDuration={1}
+        ease='back.inOut(2)'
+        scrollStart='center bottom+=50%'
+        scrollEnd='bottom bottom-=40%'
+        stagger={0.03}
+      >
+        Proyectos
+      </ScrollFloat></h2>
 
       <nav>
         <ul className="gallery__nav">
