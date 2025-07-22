@@ -37,7 +37,7 @@
   animation-delay: .3s;
 }
 
-/* BREACKPOINT Desktop*/
+/* BREACKPOINT Mobile*/
 
 @media (width <= 1200px) {
   .hero__container{
