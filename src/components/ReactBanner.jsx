@@ -7,7 +7,7 @@ function ReactBanner() {
         <section className='reactBanner reactBanner__block'>
             
             <img className='reactBanner__img' src="https://i.ibb.co/dJcY0gbN/react-img-1.png" alt="Me represento en una ilustración, flotando sobre pantallas de código e iterando entre diseño y desarrollo." />
-         
+
             <div className='reactBanner__info'>
               <p>
                 Esta web está desarrollada desde cero con React. 
@@ -18,6 +18,9 @@ function ReactBanner() {
                 Gestiono estado, props y hooks avanzados, aplicando buenas 
                 prácticas de desarrollo frontend. También integré animaciones, 
                 diseño responsive y optimización del rendimiento.
+              </p>
+              <p>
+                
               </p>
 
               <a 
