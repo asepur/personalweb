@@ -90,7 +90,7 @@ function Header() {
           className={`header__nav--link ${selectedLink === 'studies' ? 'selected' : ''}`}
           onClick={() => handleLinkClick('studies')}
         >
-          Formación
+          Estudios
         </a>
         <a 
           href="#contact" 

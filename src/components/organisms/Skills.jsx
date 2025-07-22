@@ -16,6 +16,9 @@ function Skills() {
                     Skills
                   </ScrollFloat>
             </h2>
+            <p>
+                Un stack en constante evolución, enfocado en eficiencia, diseño intuitivo y desarrollo moderno.
+            </p>
 
             <MyStacks />
 
