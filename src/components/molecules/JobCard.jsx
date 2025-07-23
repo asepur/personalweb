@@ -1,5 +1,5 @@
 
-import "../organisms/CV.css";
+import "../organisms/cv.css";
 
 const JobCard = () => {
 
