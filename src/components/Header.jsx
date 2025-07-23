@@ -23,15 +23,18 @@ function Header() {
   const handleScroll = () => {
     const homeSection = document.getElementById('home');
     const gallerySection = document.getElementById('gallery');
+    const skillsSection = document.getElementById('skills');
     const cvSection = document.getElementById('cv');
+    const studiesSection = document.getElementById('studies');
     const contactSection = document.getElementById('contact');
 
-    if (homeSection && gallerySection && cvSection && contactSection) {
+    if (homeSection && gallerySection && skillsSection && cvSection && studiesSection && contactSection) {
       const sections = [
         { id: 'home', offsetTop: homeSection.getBoundingClientRect().top },
         { id: 'gallery', offsetTop: gallerySection.getBoundingClientRect().top },
-        { id: 'skills', offsetTop: cvSection.getBoundingClientRect().top },
+        { id: 'skills', offsetTop: skillsSection.getBoundingClientRect().top },
         { id: 'cv', offsetTop: cvSection.getBoundingClientRect().top },
+        { id: 'studies', offsetTop: studiesSection.getBoundingClientRect().top },
         { id: 'contact', offsetTop: contactSection.getBoundingClientRect().top },
       ];
 
