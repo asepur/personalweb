@@ -1,5 +1,5 @@
 import { FiArrowRight } from "react-icons/fi"; // Para la flecha
-
+import './MyStacks.css'
 
 
 const tools = [

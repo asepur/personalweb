@@ -45,7 +45,7 @@
 
 
 /* Responsivo */
-@media (width > 768px) {
+@media (width >= 1200px) {
   .skills {
     padding: 6rem 4rem;
   }
