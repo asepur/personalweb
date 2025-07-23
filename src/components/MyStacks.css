@@ -67,7 +67,6 @@
 
 @media (width >= 1024px) {
   .tool-list {
-    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
