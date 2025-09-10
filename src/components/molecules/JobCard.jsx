@@ -33,37 +33,37 @@ const JobCard = () => {
             <span>CorelDraw</span>
           </div>
 
-          <h4>Principales responsabilidades</h4>
+          <h4>Principales hitos conseguidos</h4>
           <ul className="cv__responsibilities">
             <li>
-              <p><strong>Diseño Gráfico</strong><br />
-                Diseño y creación de contenido web y mockups para e-commerce, <strong>aumentando la producción diaria en un 87%</strong>. Desarrollo de materiales de branding para fortalecer la identidad visual de la marca.
-              </p>
+              <p><strong>Rediseño secciones web</strong></p>
+              <p>Teniendo como objetivo reducir el CLS de las páginas principales, se analizaron y rediseñaron bloques problematicos</p>
+              <p><strong>Impacto:</strong> Reducción de un 27% de media del CLS en las páginas afectadas, haciéndolas más estables y mejorando la UX.</p>
             </li>
             <li>
-              <p><strong>UX</strong><br />
-                Screen records, heatmaps, shadowing o entrevistas para evaluar mejoras en la web. Análisis de datos y creación de métricas permanencia y conversión.
-              </p>
+              <p><strong>Estructura y protocolos del departamento</strong></p>
+              <p>Se definieron flujos de trabajo claros, responsabilidades y procedimientos estandarizados.</p>
+              <p><strong>Impacto:</strong> mejor coordinación interna, menos ambigüedad y mayor autonomía del equipo.</p>
             </li>
             <li>
-              <p><strong>UI</strong><br />
-                Diseño y rediseño de interfaces: wireframes, prototipos interactivos y MVP para nuevas funcionalidades.
-              </p>
+              <p><strong>Medición de productividad del departamento</strong></p>
+              <p>Implementación de sistemas para monitorizar carga de trabajo, tiempos de entrega y eficiencia.</p>
+              <p><strong>Impacto: </strong> visibilidad real del rendimiento y capacidad de detectar cuellos de botella.</p>
             </li>
             <li>
-              <p><strong>Liderazgo y estructura de equipo</strong><br />
-                Redefinición del rol del área de diseño. Implementé procesos, documentación y KPIs, duplicando la productividad y ampliando responsabilidades estratégicas.
-              </p>
+              <p><strong>Optimización de procesos internos</strong></p>
+              <p>Revisión de flujos de trabajo para eliminar pasos redundantes, simplificar registros y priorizar lo realmente importante.</p>
+              <p><strong>Impacto: </strong> menos tareas mecánicas y más foco creativo de los diseñadores.</p>
             </li>
             <li>
-              <p><strong>Colaboración interdepartamental</strong><br />
-                Con desarrollo para la implementación de mejoras en la web y con marketing en el diseño de campañas visuales, asegurando una comunicación fluida entre equipos y una ejecución eficiente de los proyectos.
-              </p>
+              <p><strong>Automatización de procesos</strong></p>
+              <p>Introducción de automatizaciones en procesos clave con IA que antes requería intervención manual.</p>
+              <p><strong>Impacto: </strong> ahorro significativo de tiempo, reducción de errores técnicos y aumento de la productividad y capacidad de respuesta.</p>
             </li>
             <li>
-              <p><strong>Project Management</strong><br />
-                Coordinación del equipo de diseño, formación de becarios y gestión de tareas diarias.
-              </p>
+              <p><strong>Optimización de documentos entregables al cliente</strong></p>
+              <p>Estandarización y mejora de plantillas y presentaciones entregadas.</p>
+              <p><strong>Impacto: </strong> imagen más profesional frente al cliente, reducción de errores, mayor agilidad.</p>
             </li>
           </ul>
       </article>
