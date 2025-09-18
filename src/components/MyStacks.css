@@ -22,6 +22,8 @@
 
 .tool-card:hover{
     background-color: var(--color-dark-secondary);
+        box-shadow: 0 0 8px 2px var(--color-accent-shadow);
+
 }
 
 .tool-info {

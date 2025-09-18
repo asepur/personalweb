@@ -8,6 +8,10 @@
     padding: 4rem 2rem;
   }
 
+  .hero__container h1{
+    font-size: var(--step-5);
+  }
+
   .hero__container--img{
     width: 700px;
     margin-top: 5%;
@@ -46,7 +50,11 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 10%;
-    overflow: hidden;
+  }
+
+    .hero__container h1{
+    font-size: var(--step-4);
+    text-align: center;
   }
 
   .hero__container--img{

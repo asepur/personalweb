@@ -15,6 +15,7 @@
 
 
         --color-accent: #BD2A2A;
+        --color-accent-shadow: #bd2a2a5d;
         --color-dark-primary: #202020;
         --color-dark-secondary: #414141;
         --color-dark-terciary: #bfbfbf;
@@ -25,7 +26,8 @@
         --step-1: 1.25rem;  /* 24px */
         --step-2: 1.5rem;   /* 32px */
         --step-3: 2.25rem;  /* 40px */
-        --step-4: 3rem;     /* 48px */
+        --step-4: 4rem;     /* 48px */
+        --step-5: 6rem;
 }
 
 /* Variables para dark mode */
@@ -39,7 +41,8 @@
 
 
 h1 {
-        font-size: var(--step-4);
+        font-size: var(--step-5);
+        font-weight: 900;
         margin-bottom: 24px;
         line-height: 1.2;
       }
