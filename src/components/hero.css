@@ -1,72 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
-.hero__container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    color: var(--color-light-primary);
-    padding: 4rem 2rem;
-  }
+/* ============================================
+   HERO.CSS - Sección principal
+   Mobile First
+   ============================================ */
 
-  .hero__container h1{
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* === TÍTULO PRINCIPAL === */
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  color: var(--color-light-primary);
+}
+
+.hero__title-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero__title-text {
+  font-family: var(--font-h1);
+  font-size: var(--step-5);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hero__title-accent {
+  color: var(--color-accent);
+  position: relative;
+}
+
+.hero__title-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.hero:hover .hero__title-accent::after {
+  transform: scaleX(1);
+}
+
+/* === INDICADOR DE SCROLL === */
+.hero__scroll-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 2s infinite;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.hero__scroll-indicator:hover {
+  opacity: 1;
+}
+
+.hero__scroll-icon {
+  color: var(--color-dark-terciary);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero__scroll-icon:hover {
+  color: var(--color-accent);
+  transform: translateY(5px);
+}
+
+/* === ANIMACIONES === */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* === BREAKPOINT TABLET (≥ 768px) === */
+@media (min-width: 768px) {
+  .hero {
+    padding: 3rem 2rem;
+  }
+  
+  .hero__title-text {
     font-size: var(--step-5);
   }
-
-  .hero__container--img{
-    width: 700px;
-    margin-top: 5%;
-    animation: slideIn 1s forwards ease-in-out;
-    margin-bottom: -5%;
-    opacity: 1;
+  
+  .hero__title-line {
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
-
-.hero__container--name span{
-  display: flex;
-  justify-content: end;
-  font-size: 4em;
-  animation: slideIn 1s forwards ease-in-out;
-  opacity: 1;
-
-  font-family: "Boldonse", system-ui;
-  font-weight: 400;
-  font-style: normal;
+  
+  .hero__content {
+    gap: 4rem;
+  }
 }
 
-
-.hero__container--name span:nth-child(1){
-  margin-bottom: -5%;
+/* === BREAKPOINT DESKTOP (≥ 1024px) === */
+@media (min-width: 1024px) {
+  .hero__title-line {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .hero__title-text {
+    font-size: 6rem;
+  }
+  
+  .hero__title-accent {
+    font-size: 7rem;
+  }
 }
 
-.hero__container--name  span:nth-child(2){
-  animation-delay: .3s;
+/* === BREAKPOINT DESKTOP LARGE (≥ 1200px) === */
+@media (min-width: 1200px) {
+  .hero__title-text {
+    font-size: 7rem;
+  }
+  
+  .hero__title-accent {
+    font-size: 8rem;
+  }
+  
+  .hero__content {
+    gap: 5rem;
+  }
 }
 
-/* BREACKPOINT Mobile*/
-
-@media (width <= 1200px) {
-  .hero__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10%;
+/* === PREFERENCIAS DE REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  .hero__title-accent::after,
+  .hero__scroll-indicator,
+  .hero__scroll-icon {
+    animation: none;
+    transition: none;
   }
-
-    .hero__container h1{
-    font-size: var(--step-4);
-    text-align: center;
+  
+  .hero__scroll-indicator {
+    animation: none;
   }
+}
 
-  .hero__container--img{
-    margin: 10px;
-    height: 80%;
-    width: auto;
-    
-  }
-
-  .hero__container--name span{
-    display: flex;
-    justify-content: center;
-    font-size: 4em;
-  }
+/* === ACCESIBILIDAD FOCUS === */
+.hero__scroll-icon:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
 }

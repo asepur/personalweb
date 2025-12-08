@@ -1,5 +1,9 @@
-/* header.css */
+/* ============================================
+   HEADER.CSS - Navegación principal
+   Mobile First
+   ============================================ */
 
+/* === HEADER BASE (MOBILE) === */
 header {
   display: flex;
   justify-content: space-between;
@@ -7,16 +11,19 @@ header {
   padding: 1rem;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 100;
   background-color: var(--color-dark-primary);
+  transition: background-color 0.3s ease;
 }
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
+/* === BOTÓN TEMA (MOBILE) === */
 .header__icons {
   display: flex;
   justify-content: center;
@@ -26,174 +33,206 @@ header {
   border: none;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: none;
-  transition: 200ms ease;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .header__icons:hover,
 .header__icons:focus {
   background-color: var(--color-background-primary);
-  transition: 300ms ease;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .header__icons:active {
-  background-color: transparent;
-  transform: scale(110%);
+  transform: scale(0.95);
 }
 
 .header__icons svg {
   height: 20px;
+  width: 20px;
   fill: var(--color-background-secondary);
-  transition: 300ms ease;
+  transition: fill 0.2s ease;
 }
 
-.header__icons:hover svg,
-.header__icons.header__icons.active svg {
-  fill: var(--color-background-dark);
+.header__icons:hover svg {
+  fill: var(--color-accent);
 }
 
+/* === NAVEGACIÓN DESKTOP (OCULTA EN MOBILE) === */
 .header__nav {
-  display: flex;
-  gap: 10px;
-  border: 0;
-  border-radius: 50px;
-  padding: 5px;
-  transition: 300ms ease;
+  display: none; /* Oculto en mobile */
 }
 
-
+/* === DROPDOWN MENU (MOBILE) === */
 .mv__menu {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .dropdown__menu {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 1rem;
+  right: 1rem;
+  background-color: var(--color-background-dark);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  margin-top: 0.5rem;
 }
 
-.header__nav--link {
-  padding: 8px 12px;
-  border-radius: 50px;
+.dropdown__menu.show {
+  display: block;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown__menu--link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdown__menu--link a {
+  padding: 0.75rem 1rem;
+  color: var(--color-background-light);
   text-decoration: none;
-  color: var(--color-light-primary);
+  border-radius: 6px;
   font-size: var(--step-0);
-  font-weight: 600;
-  width: auto;
-  transition: transform 0.2s ease;
-  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
-.header__nav--link:hover {
-  transform: scale(1.05);
-  color: var(--color-light-primary);
+.dropdown__menu--link a:hover,
+.dropdown__menu--link a:focus {
+  background-color: var(--color-background-terciary);
+  outline: none;
+}
+
+.dropdown__menu--link a.selected {
   background-color: var(--color-accent);
+  color: var(--color-text-light);
+  font-weight: 600;
 }
 
-.header__nav--link a:hover {
-  background-color: var(--color-background-light);
-  color: var(--color-text-primary);
-  font-weight: 800;
-  cursor: default;
-}
-
-.selected {
-  background-color: var(--color-background-light);
-  color: var(--color-text-primary);
-  font-weight: 800;
-  cursor: default;
-}
-
-.selected:hover {
-  background-color: var(--color-background-light);
-  color: var(--color-text-primary);
-}
-
-.dark--mode {
-  display: none;
-}
-
-/* BREAKPOINTS Tablets */
-@media (width <= 768px) {
+/* === BREAKPOINT TABLET (≥ 768px) === */
+@media (min-width: 768px) {
   header {
-    padding: 4%;
-    justify-content: flex-start;
+    padding: 1rem 2rem;
   }
-
+  
   .mv__menu {
-    display: flex;
-    width: 40px;
-    height: 40px;
+    display: none; /* Ocultar hamburguesa en tablet+ */
   }
-
+  
+  /* Mostrar navegación desktop en tablet+ */
   .header__nav {
-    display: none;
-  }
-
-  .header__icons {
-    outline: none;
-    border: none;
-    border-radius: 50%;
-    box-shadow: none;
-  }
-
-  .dropdown {
-    position: relative;
-  }
-
-  .dropdown__menu {
-    width: 150px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background-color: var(--color-background-dark);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-  }
-
-  .dropdown__menu--link {
     display: flex;
-    flex-direction: column;
-    padding: 5px;
-    gap: 10px;
-    color: var(--color-background-light);
+    gap: 0.75rem;
+    border-radius: 50px;
+    padding: 0.25rem;
+    background-color: transparent;
+    margin: 0 auto;
+  }
+  
+  .header__nav--link {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .dropdown__menu--link:hover {
-    background-color: var(--color-background-terciary);
-    border-radius: 8px;
+    color: var(--color-light-primary);
+    font-size: var(--step-0);
     font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
   }
-
-  .dropdown__menu.hide {
-    display: none;
+  
+  .header__nav--link:hover {
+    transform: scale(1.05);
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
   }
-
-  .dropdown__menu.show {
-    display: block;
+  
+  .header__nav--link:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+  
+  .header__nav--link.selected {
+    background-color: var(--color-background-light);
+    color: var(--color-text-primary);
+    font-weight: 800;
+  }
+  
+  .header__nav--link.selected:hover {
+    background-color: var(--color-background-light);
+    color: var(--color-text-primary);
+    transform: none;
   }
 }
 
-/* BREACKPOINT Desktop*/
-@media (width >= 1024px) {
+/* === BREAKPOINT DESKTOP (≥ 1024px) === */
+@media (min-width: 1024px) {
   .header__nav {
-    gap: 20px;
-    padding: 10px 20px;
+    gap: 1.25rem;
+    padding: 0.5rem 1.25rem;
   }
-
+  
   .header__nav--link {
     font-size: 1em;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
   }
-
+  
   .header__icons {
     height: 50px;
     width: 50px;
   }
-
+  
   .header__icons svg {
     height: 25px;
+    width: 25px;
   }
 }
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === ACCESIBILIDAD === */
+@media (prefers-reduced-motion: reduce) {
+  .header__nav--link,
+  .header__icons,
+  .dropdown__menu {
+    transition: none;
+  }
+  
+  .header__nav--link:hover {
+    transform: none;
+  }
+  
+  .dropdown__menu.show {
+    animation: none;
+  }
+}
+
+/* === CORRECCIÓN DE SELECTOR ERRÓNEO === */
+/* Eliminado: .header__nav--link a:hover (selector incorrecto) */

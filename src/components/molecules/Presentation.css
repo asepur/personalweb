@@ -1,22 +1,200 @@
-.presentation__container{
+/* ============================================
+   PRESENTATION.CSS - Sección de presentación
+   Mobile First
+   ============================================ */
 
-  padding: 68px 40px;
-  margin-bottom: var(--step-4);
+.presentation {
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: var(--color-bg-primary);
 }
 
-.box__container{
-  margin-top: 20px;
+.presentation__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  gap: 2rem;
-  
+  gap: 3rem;
 }
 
-.box__container--content{
+/* === CONTENIDO PRINCIPAL === */
+.presentation__content {
   display: flex;
   flex-direction: column;
-  position: relative; 
+  gap: 1.5rem;
 }
 
-.box__container--content .right{
-  border: 1px solid red;
+.presentation__title {
+  font-family: var(--font-h1);
+  font-size: var(--step-3);
+  color: var(--color-text-secondary);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.presentation__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.presentation__text p {
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.presentation__text strong {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* === LLAMADA A LA ACCIÓN === */
+.presentation__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--color-bg-card);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.presentation__cta-text {
+  font-size: var(--step-1);
+  line-height: 1.4;
+  color: var(--color-text);
+  margin: 0;
+}
+
+
+.presentation__cta-subtext {
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.presentation__button {
+  margin-top: 1rem;
+}
+
+.presentation__magnetic-btn {
+  /* Estilos específicos para el botón en esta sección */
+  min-width: 160px;
+}
+
+/* === EFECTOS DE HOVER === */
+.presentation__cta {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.presentation__cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* === BREAKPOINT TABLET (≥ 768px) === */
+@media (min-width: 768px) {
+  .presentation {
+    padding: 3rem 2rem;
+  }
+  
+  .presentation__container {
+    gap: 4rem;
+  }
+  
+  .presentation__title {
+    font-size: var(--step-4);
+  }
+  
+  .presentation__cta {
+    padding: 2.5rem;
+  }
+  
+  .presentation__cta-text {
+    font-size: var(--step-2);
+  }
+}
+
+/* === BREAKPOINT DESKTOP (≥ 1024px) === */
+@media (min-width: 1024px) {
+  .presentation__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  
+  .presentation__title {
+    font-size: var(--step-4);
+  }
+  
+  .presentation__cta {
+    padding: 3rem;
+    position: sticky;
+    top: 6rem; /* Para que siga al hacer scroll */
+  }
+}
+
+/* === BREAKPOINT DESKTOP LARGE (≥ 1200px) === */
+@media (min-width: 1200px) {
+  .presentation {
+    padding: 4rem 2rem;
+  }
+  
+  .presentation__container {
+    gap: 5rem;
+  }
+  
+  .presentation__title {
+    font-size: var(--step-5);
+  }
+}
+
+/* === ANIMACIÓN DE ENTRADA === */
+@media (prefers-reduced-motion: no-preference) {
+  .presentation__content {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+  }
+  
+  .presentation__cta {
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === ACCESIBILIDAD === */
+@media (prefers-reduced-motion: reduce) {
+  .presentation__cta,
+  .presentation__content {
+    transition: none;
+    animation: none;
+  }
+  
+  .presentation__cta:hover {
+    transform: none;
+  }
+}
+
+/* === ESTILOS PARA EL TEMA OSCURO === */
+[data-theme="dark"] .presentation__cta {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .presentation__cta:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }

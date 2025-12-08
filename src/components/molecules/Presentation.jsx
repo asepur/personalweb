@@ -1,30 +1,49 @@
 import './Presentation.css';
-import MagneticButton from '../atoms/MagneticButton.jsx'
-
+import MagneticButton from '../atoms/MagneticButton.jsx';
 
 const Presentation = () => {
-    return (
-      <div className='presentation__container box__container'>
+  return (
+    <section className="presentation" aria-labelledby="presentation-title">
+      <div className="presentation__container box__container">
+        <div className="presentation__content box__container--content">
+          <h2 id="presentation-title" className="presentation__title">
+            ¡Bienvenid@s!
+          </h2>
+          
+          <div className="presentation__text">
+            <p>
+              Soy <strong>Asepur</strong> (Andrés para los amigos), un diseñador gráfico 
+              especializado en crear experiencias de usuario memorables para productos digitales. 
+              Mi enfoque combina estética visual con funcionalidad intuitiva.
+            </p>
             
-              <div className='box__container--content'>
-                <h3>¡ Bienvenidxs a mi web !</h3>
-                  <p> Soy Asepur (Andrés para los amigos), un diseñador 
-                    gráfico enfocado en la creación de experiencias 
-                    de usuario para productos digitales. </p>
-                    
-                  <p>En esta web, quiero compartir mis proyectos y todo 
-                    lo que voy aprendiendo para seguir perfeccionando 
-                    mis habilidades.
-                  </p>
-              </div>
-
-              <div className='box__container--content'>
-                <p><b>¡No dudes en ponerte en contacto 
-                conmigo para lo que necesites!</b></p>
-                <MagneticButton/>
-              </div>
+            <p>
+              En este espacio comparto mi trayectoria, proyectos destacados y aprendizajes 
+              continuos. Cada diseño es una oportunidad para innovar y perfeccionar 
+              mis habilidades.
+            </p>
           </div>
-    );
-  };
-  
-  export default Presentation;
+        </div>
+
+        <div className="presentation__cta box__container--content">
+          <p className="presentation__cta-text">
+            <strong>
+              ¿Tienes un proyecto en mente? ¡Hablemos!
+            </strong>
+          </p>
+          <p className="presentation__cta-subtext">
+            Estoy siempre abierto a colaboraciones y nuevos desafíos creativos.
+          </p>
+          <div className="presentation__button">
+            <MagneticButton 
+              text="Contactar"
+              className="presentation__magnetic-btn"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Presentation;

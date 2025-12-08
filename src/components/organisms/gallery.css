@@ -9,9 +9,7 @@
     cursor: default;
   }
   
-  .link--selected:hover{
-    transform: none;
-  }
+  
 
   .gallery__nav{
     list-style: none;
@@ -37,8 +35,11 @@
   
   .gallery__nav--link:hover {
     transform: scale(1.05);
-    background-color: var(--color-light-primary);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.477);
+    background-color: var(--color-accent);
+    box-shadow: 0 0 12px 4px var(--color-accent-shadow);
+    color: var(--color-light-primary);
+
+    
   }
   
   .link--selected{
@@ -46,13 +47,18 @@
     font-weight: 700;
     cursor: pointer;
     color: var(--color-dark-primary);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.477);
+    box-shadow: 0 0 12px 4px var(--color-accent-shadow);
 
   }
   
   .link--selected:hover{
     transform: none;
-    background-color: var(--color-text-light);
+    cursor: auto;
+    color: var(--color-dark-primary);
+    background-color: var(--color-light-primary);
+
+
+    
   }
   
   .gallery__container{
@@ -129,6 +135,10 @@
 
     font-size: 12px;
     font-weight: 600;
+  }
+
+  .projectCard:hover{
+    border: 1px solid
   }
 
   /* BREACKPOINT Tablet*/

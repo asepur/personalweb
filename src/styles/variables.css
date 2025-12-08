@@ -1,4 +1,6 @@
 /* Variables para light mode (por defecto) */
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
+
 
 :root {
         --color-background-primary: #F2F2F2;  /* Fondo principal */
@@ -28,23 +30,23 @@
         --step-3: 2.25rem;  /* 40px */
         --step-4: 4rem;     /* 48px */
         --step-5: 6rem;
-}
 
-/* Variables para dark mode */
 
-[data-theme="dark"] {
-        
-        --color-text: #e0e0e0;
-        --color-primary: #bb86fc;
-        --color-secondary: #03dac6;
+        --font-h1: "Pridi", serif;
 }
 
 
-h1 {
+
+
+.h1 {
         font-size: var(--step-5);
         font-weight: 900;
-        margin-bottom: 24px;
         line-height: 1.2;
+        
+        font-family: var(--font-h1);
+        font-weight: 500;
+        font-style: normal;
+
       }
 
 h2 {
@@ -72,5 +74,6 @@ p {
         font-weight: 500;
         margin-bottom: 16px;
         line-height: 1.6;
+        color: var(--color-light-primary);
       }
       

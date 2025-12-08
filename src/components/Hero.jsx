@@ -1,17 +1,28 @@
-
-import './hero.css'
-
+import './hero.css';
+import { CgScrollV } from "react-icons/cg";
 
 function Hero() {
-	return (
-
-        <section className="hero__container">
-          <img src="https://i.ibb.co/n808qPkZ/grulla-blanca.png" alt="Ilustración original Samurai I: se muestra la grulla vestida de samurai señalando con la flecha hacia abajo." className='hero__container--img'/>
-
-          <h1>ASEPUR DESIGN</h1>
-          
-      </section>
-    );
-  };
+  return (
+    <section className="hero" aria-label="Presentación principal">
+      <div className="hero__content">
+        <div className="hero__title">
+          <div className="hero__title-line">
+            <h1 className="hero__title-text">Digital</h1>
+            <h1 className="hero__title-text">Product</h1>
+          </div>
+          <h1 className="hero__title-text hero__title-accent">Designer</h1>
+        </div>
+        
+        <div className="hero__scroll-indicator" aria-hidden="true">
+          <CgScrollV 
+            size={48}
+            className="hero__scroll-icon"
+            aria-label="Desplázate hacia abajo"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default Hero;
