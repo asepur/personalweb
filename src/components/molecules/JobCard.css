@@ -1,0 +1,376 @@
+/* ============================================
+   JOBCARD.CSS - Diseño moderno y visual
+   ============================================ */
+
+.job-card {
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  border: 1px solid var(--color-background-terciary);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* BADGE EXPERIENCIA ACTUAL */
+.job-card__badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary-400));
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* HEADER */
+.job-card__header {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.job-card__title {
+  font-size: 2.25rem;
+  font-family: var(--font-h1);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.job-card__role {
+  color: var(--color-text-light);
+}
+
+.job-card__company {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.job-card__period {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-text-light);
+  font-size: 1rem;
+}
+
+.job-card__years {
+  background: var(--color-dark-secondary);
+  padding: 0.35rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.job-card__duration {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* MÉTRICAS DE IMPACTO */
+.job-card__metrics {
+  margin: 3rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.job-card__metrics.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.metric-card {
+  background: var(--color-bg-primary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: var(--font-h1);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+background: linear-gradient(135deg, #10b981, #1c7b58); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.metric-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.metric-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  opacity: 0.8;
+}
+
+/* LOGROS */
+.job-card__achievements {
+  margin: 3rem 0;
+}
+
+.achievements-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-light);
+}
+
+.achievements-icon {
+  font-size: 1.25rem;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.achievement-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--color-dark-secondary);
+  border-radius: 1rem;
+  border-left: 4px solid var(--color-accent);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.achievement-item:hover {
+  transform: translateX(5px);
+  background: var(--color-bg-secondary);
+}
+
+.achievement-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.achievement-content p {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.achievement-impact {
+  display: inline-block;
+  background: #1c7b58;
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(189, 42, 42, 0.2);
+}
+
+/* HABILIDADES */
+.job-card__skills {
+  margin: 3rem 0 2rem 0;
+}
+
+.skills-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-light);
+}
+
+.skills-icon {
+  font-size: 1.25rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.skill-category-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--color-text-light);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-dark-secondary);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: var(--color-dark-secondary);
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  border: 1px solid var(--color-dark-secondary);
+  transition: all 0.2s ease;
+}
+
+/* FOOTER */
+.job-card__footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.job-card__details-btn {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.job-card__details-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(189, 42, 42, 0.1);
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.job-card__details-btn[aria-expanded="true"] .btn-arrow {
+  transform: rotate(180deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .job-card {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .job-card__title {
+    font-size: 1.75rem;
+  }
+  
+  .job-card__company {
+    font-size: 1.25rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-item {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* DARK MODE */
+[data-theme="dark"] .job-card {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .metric-card,
+[data-theme="dark"] .achievement-item,
+[data-theme="dark"] .skill-category {
+  background: var(--color-bg-tertiary);
+}
+
+/* ANIMACIONES PARA MÉTRICAS */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metric-card {
+  animation: countUp 0.6s ease-out;
+}
+
+.metric-card:nth-child(1) { animation-delay: 0.1s; }
+.metric-card:nth-child(2) { animation-delay: 0.3s; }
+.metric-card:nth-child(3) { animation-delay: 0.5s; }

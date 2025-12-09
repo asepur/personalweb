@@ -1,74 +1,150 @@
-
-import "../organisms/cv.css";
+import { useEffect, useRef, useState } from 'react';
+import './JobCard.css';
 
 const JobCard = () => {
+  const [visibleMetrics, setVisibleMetrics] = useState(false);
+  const cardRef = useRef(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisibleMetrics(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <article className="cv__job">
-        
-        <h3>Senior Graphic Designer</h3>
-        <div className="cv__job--meta">
-            <span>RegalosPublicitarios.com | Promotionice.com</span>
-            <span> - </span>
-            <span>2018 - Actual</span>
+    <article className="job-card" ref={cardRef} id="current-job">
+      {/* HEADER CON TÍTULO Y EMPRESA */}
+      <header className="job-card__header">
+        <div className="job-card__badge">Experiencia Actual</div>
+        <h2 className="job-card__title">
+          <span className="job-card__role">Digital Product Designer</span>
+          <span className="job-card__company">RegalosPublicitarios.com</span>
+        </h2>
+        <div className="job-card__period">
+          <span className="job-card__years">2018 - Presente</span>
+          <span className="job-card__duration">6+ años</span>
         </div>
+      </header>
 
-          <h4>Skills</h4>
-          <div className="cv__tags">
-            <span>Liderazgo de equipo</span>
-            <span>Creación de contenido</span>
-            <span>Formación de becarios</span>
-            <span>Figma</span>
-            <span>Microsoft Clarity</span>
-            <span>User Research</span>
-            <span>Screen Record</span>
-            <span>GA 4</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Javascript</span>
-            <span>CMS</span>
-            <span>Heat Maps</span>
-            <span>Photoshop</span>
-            <span>CorelDraw</span>
+      {/* MÉTRICAS DE IMPACTO (VISUAL) */}
+      <div className={`job-card__metrics ${visibleMetrics ? 'visible' : ''}`}>
+        <div className="metrics-grid">
+          <div className="metric-card">
+            <div className="metric-value" data-value="-27">-27%</div>
+            <div className="metric-label">Reducción CLS</div>
+            <div className="metric-desc">Mejor experiencia de usuario</div>
           </div>
+          
+          <div className="metric-card">
+            <div className="metric-value" data-value="40">+40%</div>
+            <div className="metric-label">Productividad</div>
+            <div className="metric-desc">Equipo más eficiente</div>
+          </div>
+          
+          <div className="metric-card">
+            <div className="metric-value" data-value="6">6</div>
+            <div className="metric-label">Procesos</div>
+            <div className="metric-desc">Rediseñados y optimizados</div>
+          </div>
+        </div>
+      </div>
 
-          <h4>Principales hitos conseguidos</h4>
-          <ul className="cv__responsibilities">
-            <li>
-              <p><strong>Rediseño secciones web</strong></p>
-              <p>Teniendo como objetivo reducir el CLS de las páginas principales, se analizaron y rediseñaron bloques problematicos</p>
-              <p><strong>Impacto:</strong> Reducción de un 27% de media del CLS en las páginas afectadas, haciéndolas más estables y mejorando la UX.</p>
-            </li>
-            <li>
-              <p><strong>Estructura y protocolos del departamento</strong></p>
-              <p>Se definieron flujos de trabajo claros, responsabilidades y procedimientos estandarizados.</p>
-              <p><strong>Impacto:</strong> mejor coordinación interna, menos ambigüedad y mayor autonomía del equipo.</p>
-            </li>
-            <li>
-              <p><strong>Medición de productividad del departamento</strong></p>
-              <p>Implementación de sistemas para monitorizar carga de trabajo, tiempos de entrega y eficiencia.</p>
-              <p><strong>Impacto: </strong> visibilidad real del rendimiento y capacidad de detectar cuellos de botella.</p>
-            </li>
-            <li>
-              <p><strong>Optimización de procesos internos</strong></p>
-              <p>Revisión de flujos de trabajo para eliminar pasos redundantes, simplificar registros y priorizar lo realmente importante.</p>
-              <p><strong>Impacto: </strong> menos tareas mecánicas y más foco creativo de los diseñadores.</p>
-            </li>
-            <li>
-              <p><strong>Automatización de procesos</strong></p>
-              <p>Introducción de automatizaciones en procesos clave con IA que antes requería intervención manual.</p>
-              <p><strong>Impacto: </strong> ahorro significativo de tiempo, reducción de errores técnicos y aumento de la productividad y capacidad de respuesta.</p>
-            </li>
-            <li>
-              <p><strong>Optimización de documentos entregables al cliente</strong></p>
-              <p>Estandarización y mejora de plantillas y presentaciones entregadas.</p>
-              <p><strong>Impacto: </strong> imagen más profesional frente al cliente, reducción de errores, mayor agilidad.</p>
-            </li>
-          </ul>
-      </article>
+      {/* LOGROS PRINCIPALES */}
+      <div className="job-card__achievements">
+        <h3 className="achievements-title">
+          <span className="achievements-icon">🏆</span>
+          Logros Clave
+        </h3>
+        <ul className="achievements-list">
+          <li className="achievement-item">
+            <div className="achievement-icon">🚀</div>
+            <div className="achievement-content">
+              <h4>Rediseño de secciones web</h4>
+              <p>Análisis y rediseño de bloques problemáticos, mejora de interfaz y experiencia de usuario.</p>
+              <span className="achievement-impact">Impacto: -27% CLS, UX mejorada</span>
+            </div>
+          </li>
+          
+          <li className="achievement-item">
+            <div className="achievement-icon">🤖</div>
+            <div className="achievement-content">
+              <h4>Automatización con IA</h4>
+              <p>Implementación de automatizaciones en procesos clave</p>
+              <span className="achievement-impact">Impacto: Ahorro tiempo, menos errores</span>
+            </div>
+          </li>
+          
+          <li className="achievement-item">
+            <div className="achievement-icon">🏗️</div>
+            <div className="achievement-content">
+              <h4>Estructura de departamento</h4>
+              <p>Definición de flujos de trabajo y procedimientos estandarizados</p>
+              <span className="achievement-impact">Impacto: Mejor coordinación y autonomía</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      {/* HABILIDADES ORGANIZADAS */}
+      <div className="job-card__skills">
+        <h3 className="skills-title">
+          <span className="skills-icon">🛠️</span>
+          Habilidades Desarrolladas
+        </h3>
+        <div className="skills-grid">
+          <div className="skill-category">
+            <h4 className="skill-category-title">Liderazgo & Gestión</h4>
+            <div className="skill-tags">
+              <span className="skill-tag">Gestión de equipo</span>
+              <span className="skill-tag">Formación</span>
+              <span className="skill-tag">Optimización procesos</span>
+              <span className="skill-tag">Estrategia departamental</span>
+            </div>
+          </div>
+          
+          <div className="skill-category">
+            <h4 className="skill-category-title">UX/UI & Research</h4>
+            <div className="skill-tags">
+              <span className="skill-tag">Figma</span>
+              <span className="skill-tag">User Research</span>
+              <span className="skill-tag">Heat Maps</span>
+              <span className="skill-tag">GA4</span>
+              <span className="skill-tag">Microsoft Clarity</span>
+            </div>
+          </div>
+          
+          <div className="skill-category">
+            <h4 className="skill-category-title">Desarrollo & Tech</h4>
+            <div className="skill-tags">
+              <span className="skill-tag">HTML/CSS</span>
+              <span className="skill-tag">JavaScript</span>
+              <span className="skill-tag">CMS</span>
+              <span className="skill-tag">Automatización</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTÓN PARA VER DETALLES (OPCIONAL) */}
+      <div className="job-card__footer">
+        <button className="job-card__details-btn" aria-expanded="false">
+          Ver detalles completos
+          <span className="btn-arrow">↓</span>
+        </button>
+      </div>
+    </article>
   );
 };
-
 
 export default JobCard;
