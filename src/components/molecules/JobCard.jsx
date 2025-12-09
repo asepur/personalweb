@@ -135,14 +135,6 @@ const JobCard = () => {
           </div>
         </div>
       </div>
-
-      {/* BOTÓN PARA VER DETALLES (OPCIONAL) */}
-      <div className="job-card__footer">
-        <button className="job-card__details-btn" aria-expanded="false">
-          Ver detalles completos
-          <span className="btn-arrow">↓</span>
-        </button>
-      </div>
     </article>
   );
 };
