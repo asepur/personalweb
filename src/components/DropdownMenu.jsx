@@ -1,41 +1,118 @@
+import { useState, useEffect, useRef } from 'react';
+import './dropdownMenu.css'; // CSS separado
 
-import { useState } from 'react';
-import './header.css'
+function DropdownMenu() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
 
-function DropdownMenu () {
-    // Estado para controlar si el menú está abierto o no
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Alternar menú
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    // Función para alternar la visibilidad del menú
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+  // Cerrar menú al hacer clic en un enlace
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Cerrar menú al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current && 
+        !dropdownRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
     };
 
-    return (
-        <div className='dropdown'>
-            <button 
-                className={`header__icons mv__menu ${isMenuOpen ? 'active' : ''}`}
-                onClick={toggleMenu}
-                
-            >  
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
-                </svg>
-            </button>
-            {/* Menú desplegable */}
-            <nav 
-                className={`dropdown__menu ${isMenuOpen ? 'show' : 'hide'}`}
+    // Cerrar menú al presionar Escape
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
 
-            >
-                <a href="#home" className='dropdown__menu--link'>Home</a>
-                <a href="#gallery" className='dropdown__menu--link'>Proyectos</a>
-                <a href="#cv" className='dropdown__menu--link'>CV</a>
-                <a href="#skills" className='dropdown__menu--link'>Skills</a>
-                <a href="#contact" className='dropdown__menu--link'>Contacto</a>
-            </nav>
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscapeKey);
+      
+      // Enfocar primer enlace al abrir (para accesibilidad)
+      const firstLink = dropdownRef.current?.querySelector('a');
+      if (firstLink) {
+        setTimeout(() => firstLink.focus(), 100);
+      }
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [isMenuOpen]);
+
+  // Enlaces del menú
+  const menuItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'gallery', label: 'Proyectos' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'cv', label: 'CV' },
+    { id: 'studies', label: 'Estudios' },
+    { id: 'contact', label: 'Contacto' }
+  ];
+
+  return (
+    <div className="dropdown">
+      <button
+        ref={buttonRef}
+        className={`dropdown__toggle ${isMenuOpen ? 'active' : ''}`}
+        onClick={toggleMenu}
+        aria-expanded={isMenuOpen}
+        aria-label={isMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+        aria-controls="dropdown-menu"
+      >
+        <div className="dropdown__icon">
+          <span className="dropdown__line"></span>
+          <span className="dropdown__line"></span>
+          <span className="dropdown__line"></span>
         </div>
-
-    )
+      </button>
+      
+      <nav
+        ref={dropdownRef}
+        id="dropdown-menu"
+        className={`dropdown__menu ${isMenuOpen ? 'show' : 'hide'}`}
+        aria-hidden={!isMenuOpen}
+        role="menu"
+      >
+        <div className="dropdown__menu-content">
+          {menuItems.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="dropdown__menu--link"
+              onClick={handleLinkClick}
+              role="menuitem"
+              tabIndex={isMenuOpen ? 0 : -1}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+      
+      {/* Overlay para fondo oscuro */}
+      {isMenuOpen && (
+        <div 
+          className="dropdown__overlay" 
+          onClick={() => setIsMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+    </div>
+  );
 }
 
 export default DropdownMenu;
