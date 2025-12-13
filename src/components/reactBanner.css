@@ -1,97 +1,353 @@
+/* ============================================
+   REACT BANNER - Sección GitHub/Portfolio Técnico
+   Mobile First, Estilo Minimalista & Profesional
+   ============================================ */
 
-.reactBanner{
-    max-width: 1200px;
-    margin: 0 auto;
+.react-banner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  background-color: var(--color-dark-primary);
+  color: var(--color-text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.react-banner__content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ============================================
+   VISUAL SECTION (Ilustración)
+   ============================================ */
+.react-banner__visual {
+  position: relative;
+  order: 1;
+}
+
+.react-banner__img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.react-banner__visual:hover .react-banner__img {
+  transform: translateY(-8px);
+}
+
+.react-banner__visual-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle at center,
+    rgba(189, 42, 42, 0.1) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ============================================
+   CONTENT SECTION (Texto + CTA)
+   ============================================ */
+.react-banner__info {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.react-banner__header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.react-banner__tag {
+  display: inline-block;
+  background: rgba(189, 42, 42, 0.15);
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(189, 42, 42, 0.3);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.react-banner__title {
+  font-size: var(--step-3);
+  font-family: var(--font-h1);
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.react-banner__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.react-banner__text {
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.react-banner__text strong {
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+/* ============================================
+   CTA BUTTON (GitHub)
+   ============================================ */
+.react-banner__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.25rem 2rem;
+  font-size: var(--step-0);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-align: left;
+  box-shadow: 0 4px 20px var(--color-accent-shadow);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.react-banner__btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+  z-index: -1;
+}
+
+.react-banner__btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px var(--color-accent-shadow);
+}
+
+.react-banner__btn:hover::before {
+  left: 100%;
+}
+
+.react-banner__btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.react-banner__btn-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.react-banner__btn-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.react-banner__btn-sub {
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.react-banner__btn-arrow {
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.react-banner__btn:hover .react-banner__btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   STATS (Opcional)
+   ============================================ */
+.react-banner__stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.react-banner__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 100px;
+}
+
+.react-banner__stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.react-banner__stat-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* ============================================
+   TABLET (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+  .react-banner {
+    padding: 5rem 2rem;
+  }
+  
+  .react-banner__content {
+    gap: 4rem;
+  }
+  
+  .react-banner__header {
+    text-align: left;
+  }
+  
+  .react-banner__title {
+    font-size: var(--step-4);
+  }
+  
+  .react-banner__btn {
+    max-width: 400px;
+    margin-right: auto;
+  }
+  
+  .react-banner__stats {
+    justify-content: flex-start;
+  }
+}
+
+/* ============================================
+   DESKTOP (1024px+)
+   ============================================ */
+@media (min-width: 1024px) {
+  .react-banner {
     padding: 6rem 2rem;
-    background-color: var(--color-dark-primary);
-    color: var(--color-light-primary);
-    display: flex;
-    flex-direction: column;
+    border-radius: 2rem;
+    margin: 4rem auto;
+  }
+  
+  .react-banner__content {
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-
-  }
-
-  .reactBanner__img{
-      width: 100%;
-      height: auto;
-
+    gap: 5rem;
   }
   
-  .reactBanner__info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--step-1);
-    
-  }
-
-  .reactBanner--btn{
-    width: 300px;
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--color-accent);
-    border-radius: 8px;
-    background-color: transparent;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 800;
-    text-transform: uppercase;
-    
-    letter-spacing: 1.2px;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 2%;
-    cursor: pointer;
-    transition: 150ms ease;
-  }
-
-  .reactBanner--btn:hover{
-    background-color: var(--color-accent);
+  .react-banner__visual {
+    order: 2;
+    flex: 1;
   }
   
-
-  /* BREACKPOINT Desktop*/
-  
-  @media (width >= 800px){
-    
-    .reactBanner{
-      display: flex;
-      flex-direction: row;
-      
-      justify-content: center;
-      align-items: center;
-
-  
-    }
-  
-    .reactBanner__container{
-      display:  flex;
-      flex-direction: column;
-      width: 100%;
-    }
-
-  
-    .reactBanner__container p{
-      font-size: 18px;
-      line-height: 1.7em;
-     
-    }
-
-    .reactBanner__block{
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--step-1);
-    }
-
-     .reactBanner__img{
-      width: 400px;
-      height: auto;
-    
+  .react-banner__info {
+    order: 1;
+    flex: 1;
   }
+  
+  .react-banner__img {
+    max-width: 450px;
   }
+  
+  .react-banner__title {
+    font-size: var(--step-4);
+    line-height: 1.1;
+  }
+  
+  .react-banner__description {
+    gap: 1.5rem;
+  }
+  
+  .react-banner__btn {
+    padding: 1.5rem 2.5rem;
+  }
+}
+
+/* ============================================
+   DARK MODE ENHANCEMENTS (usando tus variables)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  .react-banner {
+    background: linear-gradient(
+      135deg,
+      var(--color-dark-primary) 0%,
+      color-mix(in srgb, var(--color-dark-primary) 95%, black) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .react-banner__stat {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.react-banner__btn:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .react-banner__img,
+  .react-banner__btn,
+  .react-banner__btn-arrow {
+    transition: none;
+  }
+  
+  .react-banner__btn::before {
+    display: none;
+  }
+}
