@@ -1,4 +1,4 @@
-import './ReactBanner.css';
+import './reactBanner.css';
 
 function ReactBanner() {
   
