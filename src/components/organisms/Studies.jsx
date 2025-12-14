@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import ScrollFloat from '../atoms/ScrollFloat';
 import './Studies.css';
 
@@ -8,44 +8,8 @@ function Studies() {
   const [planetAngles, setPlanetAngles] = useState({});
   const modalRef = useRef(null);
 
-  // Detectar si es mobile para cambiar interactividad
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Detectar click fuera del modal para cerrarlo (solo desktop)
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      // Solo en desktop y si hay un modal abierto
-      if (!isMobile && expandedPlanet && modalRef.current) {
-        // Verificar si el click fue fuera del modal
-        if (modalRef.current && !modalRef.current.contains(event.target)) {
-          // Encontrar el planeta que está expandido
-          const expandedPlanetData = planets.find(p => p.id === expandedPlanet);
-          if (expandedPlanetData) {
-            const planetIndex = planets.indexOf(expandedPlanetData);
-            const initialAngle = (planetIndex / planets.length) * 360;
-            handlePlanetClick(expandedPlanet, initialAngle);
-          }
-        }
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [expandedPlanet, isMobile]);
-
-  // Datos de las categorías/planetas
-  const planets = [
+  // Datos de las categorías/planetas con useMemo
+  const planets = useMemo(() => [
     {
       id: 'uxui',
       name: 'UX/UI',
@@ -92,10 +56,10 @@ function Studies() {
       ],
       description: 'Tecnologías y software especializado'
     }
-  ];
+  ], []); // Array vacío como dependencia = nunca cambia
 
-  // Estadísticas
-  const stats = {
+  // Estadísticas con useMemo
+  const stats = useMemo(() => ({
     totalCourses: planets.reduce((acc, planet) => acc + planet.courses.length, 0),
     totalHours: planets.reduce((acc, planet) => {
       const planetHours = planet.courses.reduce((sum, course) => {
@@ -104,10 +68,23 @@ function Studies() {
       }, 0);
       return acc + planetHours;
     }, 0),
-    years: 5
-  };
+    years: 5 // 2021-2025
+  }), [planets]);
 
-  const handlePlanetClick = (planetId, initialAngle) => {
+  // Detectar si es mobile para cambiar interactividad
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Función para manejar click en planetas
+  const handlePlanetClick = useCallback((planetId, initialAngle) => {
     if (expandedPlanet === planetId) {
       // Al cerrar: ya tenemos el ángulo guardado, solo cerrar
       setExpandedPlanet(null);
@@ -125,10 +102,34 @@ function Studies() {
       }
       setExpandedPlanet(planetId);
     }
-  };
+  }, [expandedPlanet, isMobile, setPlanetAngles]);
+
+  // Detectar click fuera del modal para cerrarlo (solo desktop)
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Solo en desktop y si hay un modal abierto
+      if (!isMobile && expandedPlanet && modalRef.current) {
+        // Verificar si el click fue fuera del modal
+        if (modalRef.current && !modalRef.current.contains(event.target)) {
+          // Encontrar el planeta que está expandido
+          const expandedPlanetData = planets.find(p => p.id === expandedPlanet);
+          if (expandedPlanetData) {
+            const planetIndex = planets.indexOf(expandedPlanetData);
+            const initialAngle = (planetIndex / planets.length) * 360;
+            handlePlanetClick(expandedPlanet, initialAngle);
+          }
+        }
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [expandedPlanet, isMobile, handlePlanetClick, planets]);
 
   // Obtener el ángulo actual para un planeta
-  const getCurrentAngle = (planetId, index) => {
+  const getCurrentAngle = useCallback((planetId, index) => {
     if (isMobile) return (index / planets.length) * 360;
     
     // Si tenemos un ángulo guardado, usarlo
@@ -138,7 +139,7 @@ function Studies() {
     
     // Si no, calcular posición inicial
     return (index / planets.length) * 360;
-  };
+  }, [isMobile, planetAngles, planets]);
 
   return (
     <section className="studies" id="studies">
