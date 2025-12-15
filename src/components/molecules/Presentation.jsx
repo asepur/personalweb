@@ -6,9 +6,9 @@ const Presentation = () => {
     <section className="presentation" aria-labelledby="presentation-title">
       <div className="presentation__container box__container">
         <div className="presentation__content box__container--content">
-          <h2 id="presentation-title" className="presentation__title">
+          <h3 id="presentation-title" className="presentation__title">
             ¡Bienvenid@s!
-          </h2>
+          </h3>
           
           <div className="presentation__text">
             <p>

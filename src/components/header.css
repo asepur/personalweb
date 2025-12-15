@@ -11,7 +11,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-dark-primary);
+  background-color: var(--color-bg-primary);
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -36,33 +36,43 @@ header {
 }
 
 .header__nav--link {
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
+  color: var(--color-text-light);
   text-decoration: none;
-  color: var(--color-light-primary);
   font-size: var(--step-0);
-  font-weight: 600;
-  transition: all 0.2s ease;
-  white-space: nowrap;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .header__nav--link:hover {
-  transform: scale(1.05);
-  background-color: var(--color-accent);
+  color: var(--color-primary-500);
+  background: rgba(189, 42, 42, 0.1);
 }
+
+.header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: var(--color-primary-500);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.footer__nav-link:hover::after {
+  transform: scaleX(1);
+}
+
 
 .header__nav--link.selected {
-  background-color: var(--color-background-light);
-  color: var(--color-text-primary);
-  font-weight: 800;
-  cursor: default;
+  color: var(--color-primary-500);
+  background: rgba(189, 42, 42, 0.1);
 }
 
-.header__nav--link.selected:hover {
-  background-color: var(--color-background-light);
-  color: var(--color-text-primary);
-  transform: none;
-}
 
 /* === MENÚ MÓVIL (DROPDOWN) === */
 .mv__menu {
@@ -107,11 +117,9 @@ header {
     position: absolute;
     top: calc(100% + 0.5rem);
     left: 0;
-    width: 200px;
-    background-color: var(--color-background-dark);
-    border-radius: 10px;
+    width: 400px;
+    background-color: var(--color-bg-primary);
     padding: 1.25rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
   }
 
@@ -137,7 +145,7 @@ header {
   }
 
   .dropdown__menu--link a.selected {
-    background-color: var(--color-accent);
+    background-color: var(--color-primary-500);
     color: var(--color-text-light);
     font-weight: 600;
   }
@@ -168,13 +176,13 @@ header {
 
   .header__nav {
     display: flex; /* Mostrar navegación desktop */
-    gap: 1.25rem;
-    padding: 0.5rem 1.25rem;
+    gap: var(--space-5);
+    padding: var(--space-unit) var(--space-5);
   }
 
   .header__nav--link {
     font-size: 1em;
-    padding: 0.625rem 1.25rem;
+    padding: 0.625rem var(--space-5);
   }
 }
 

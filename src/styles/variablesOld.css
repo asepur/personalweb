@@ -1,0 +1,102 @@
+/* ==== IMPORTACIÓN DE FUENTES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+:root {
+        /* ==== SISTEMA DE FUENTES ===== */
+        --font-pridi: "Pridi", serif;
+
+        --font-heading: var(--font-pridi);
+        --font-body: var(--font-inter);
+
+        /* ===== ESCALA TIPOGRÁFICA MODULAR ===== */
+        --text-base: 1rem;        /* 16px - base */
+        --text-scale-ratio: 1.25; /* Ratio para escala */
+        
+        --text-xs: calc(var(--text-base) * 0.75);   /* 12px */
+        --text-sm: calc(var(--text-base) * 0.875);  /* 14px */
+        --text-base: var(--text-base);              /* 16px */
+        --text-lg: calc(var(--text-base) * 1.125);  /* 18px */
+        --text-xl: calc(var(--text-base) * 1.25);   /* 20px */
+        --text-2xl: calc(var(--text-base) * 1.5);   /* 24px */
+        --text-3xl: calc(var(--text-base) * 1.875); /* 30px */
+        --text-4xl: calc(var(--text-base) * 2.25);  /* 36px */
+        --text-5xl: calc(var(--text-base) * 3);     /* 48px */
+        --text-6xl: calc(var(--text-base) * 4);     /* 64px */
+        --text-7xl: calc(var(--text-base) * 6);     /* 96px */
+
+        --color-background-primary: #F2F2F2;  /* Fondo principal */
+        --color-background-secondary: #b4b4b4;
+        --color-background-terciary: #959393; /* Fondo secundario */
+        --color-background-light: #FEFEFE; /* Color de texto claro/blanco */
+        --color-background-dark: #262626;
+
+        
+        /* Colores de Texto */
+        --color-text-primary: #343237; /* Color de texto principal */
+        --color-text-secondary: #7b7b7b; /* Color de texto secundario */
+        --color-text-light: #FEFEFE; /* Color de texto claro/blanco */
+
+
+        --color-accent: #BD2A2A;
+        --color-accent-shadow: #bd2a2a5d;
+        --color-dark-primary: #202020;
+        --color-dark-secondary: #414141;
+        --color-dark-terciary: #bfbfbf;
+        --color-light-primary: #F0EBEB;
+
+
+        --step-0: 1rem;     /* 16px */
+        --step-1: 1.25rem;  /* 24px */
+        --step-2: 1.5rem;   /* 32px */
+        --step-3: 2.25rem;  /* 40px */
+        --step-4: 4rem;     /* 48px */
+        --step-5: 6rem;
+
+
+        --font-h1: "Pridi", serif;
+}
+
+
+
+
+.h1 {
+        font-size: var(--step-5);
+        font-weight: 900;
+        line-height: 1.2;
+        
+        font-family: var(--font-h1);
+        font-weight: 500;
+        font-style: normal;
+
+      }
+
+h2 {
+        font-size: var(--step-3);
+        margin-bottom: var(--step-4);
+        line-height: 1.25;
+        text-align: center;
+      }
+
+h3 {
+        font-size: var(--step-2);
+        margin-bottom: 16px;
+        line-height: 1.3;
+
+}
+
+h4 {
+        font-size: var(--step-1);
+        margin-bottom: 8px;
+        line-height: 1.35;
+      }
+      
+p {
+        font-size: var(--step-0);
+        font-weight: 500;
+        margin-bottom: 16px;
+        line-height: 1.6;
+        color: var(--color-light-primary);
+      }
+      

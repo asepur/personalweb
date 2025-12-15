@@ -4,7 +4,7 @@
    ============================================ */
 
 .presentation {
-  padding: 2rem 1rem;
+  padding: 2rem;
   background-color: var(--color-bg-primary);
 }
 
@@ -24,9 +24,9 @@
 }
 
 .presentation__title {
-  font-family: var(--font-h1);
-  font-size: var(--step-3);
-  color: var(--color-text-secondary);
+  font-family: var(--font-heading);
+  font-size: var(--text-5xl);
+  color: var(--color-neutral-500);
   line-height: 1.2;
   margin: 0;
 }
@@ -38,14 +38,14 @@
 }
 
 .presentation__text p {
-  font-size: var(--step-0);
+  font-size: var(--text-base);
   line-height: 1.7;
-  color: var(--color-text);
+  color: var(--color-primary-50);
   margin: 0;
 }
 
 .presentation__text strong {
-  color: var(--color-accent);
+  color: var(--color-primary-500);
   font-weight: 600;
 }
 
@@ -54,25 +54,19 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 2rem;
-  background-color: var(--color-bg-card);
-  border-radius: 1rem;
-  border: 1px solid var(--color-border-light);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .presentation__cta-text {
-  font-size: var(--step-1);
+  font-size: var(--text-base);
   line-height: 1.4;
-  color: var(--color-text);
+  color: var(--color-primary-50);
   margin: 0;
 }
 
-
 .presentation__cta-subtext {
-  font-size: var(--step-0);
+  font-size: var(--text-base);
   line-height: 1.6;
-  color: var(--color-text-secondary);
+  color: var(--color-neutral-500);
   margin: 0;
 }
 
@@ -105,7 +99,7 @@
   }
   
   .presentation__title {
-    font-size: var(--step-4);
+    font-size: var(--space-24);
   }
   
   .presentation__cta {
@@ -139,7 +133,7 @@
 /* === BREAKPOINT DESKTOP LARGE (≥ 1200px) === */
 @media (min-width: 1200px) {
   .presentation {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
   }
   
   .presentation__container {
@@ -188,7 +182,7 @@
 
 /* === ESTILOS PARA EL TEMA OSCURO === */
 [data-theme="dark"] .presentation__cta {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-primary);
   border-color: var(--color-border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
