@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './JobCard.css';
+import '../../styles/variables.css'
 
 const JobCard = () => {
   const [visibleMetrics, setVisibleMetrics] = useState(false);
@@ -106,31 +107,37 @@ const JobCard = () => {
           <div className="skill-category">
             <h4 className="skill-category-title">Liderazgo & Gestión</h4>
             <div className="skill-tags">
-              <span className="skill-tag">Gestión de equipo</span>
-              <span className="skill-tag">Formación</span>
-              <span className="skill-tag">Optimización procesos</span>
-              <span className="skill-tag">Estrategia departamental</span>
+              <span className="tag--default">Gestión de equipo</span>
+              <span className="tag--default">Notion</span>
+              <span className="tag--default">Looker</span>
+              <span className="tag--default">Optimización procesos</span>
+              <span className="tag--default">Estrategia departamental</span>
+              
             </div>
           </div>
           
           <div className="skill-category">
             <h4 className="skill-category-title">UX/UI & Research</h4>
             <div className="skill-tags">
-              <span className="skill-tag">Figma</span>
-              <span className="skill-tag">User Research</span>
-              <span className="skill-tag">Heat Maps</span>
-              <span className="skill-tag">GA4</span>
-              <span className="skill-tag">Microsoft Clarity</span>
+              <span className="tag--default">Figma</span>
+              <span className="tag--default">User Research</span>
+              <span className="tag--default">Heat Maps</span>
+              <span className="tag--default">GA4</span>
+              <span className="tag--default">PostHog</span>
+              <span className="tag--default">Microsoft Clarity</span>
             </div>
           </div>
           
           <div className="skill-category">
             <h4 className="skill-category-title">Desarrollo & Tech</h4>
             <div className="skill-tags">
-              <span className="skill-tag">HTML/CSS</span>
-              <span className="skill-tag">JavaScript</span>
-              <span className="skill-tag">CMS</span>
-              <span className="skill-tag">Automatización</span>
+              <span className="tag--default">HTML/CSS</span>
+              <span className="tag--default">JavaScript</span>
+              <span className="tag--default">VisualCode</span>
+              <span className="tag--default">CMS</span>
+              <span className="tag--default">n8n</span>
+              <span className="tag--default">OpenAI</span>
+              <span className="tag--default">NanoBanana</span>
             </div>
           </div>
         </div>

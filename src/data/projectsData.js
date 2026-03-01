@@ -4,7 +4,7 @@ const projectsData = [
         title: "Optimización de Core Web Vitals",
         date: "Rediseño de bloques clave • -32% CLS en 36 categorías • 100 creatividades implementadas",
         tags: ["Photoshop", "Code", "CMS", "UX/UI"],
-        image: "https://i.ibb.co/KH49vnQ/Bifold-Brochure.png",
+        image: "https://i.ibb.co/v6CszSzc/Gemini-Generated-Image-sdq1b7sdq1b7sdq1.png",
         url: "#"
     },
     {
@@ -12,7 +12,7 @@ const projectsData = [
         title: "Rediseño de entregable final a cliente",
         date: "Mockup + info de pedido • Preparado para automatización • Iniciativa propia",
         tags: ["Illustrator", "Markdown"],
-        image: "https://i.ibb.co/TMG1XmTN/Gemini-Generated-Image-qn5vdqn5vdqn5vdq.png",
+        image: "https://i.ibb.co/KH49vnQ/Bifold-Brochure.png",
         url: "#"
     },
     {
