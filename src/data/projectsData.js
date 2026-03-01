@@ -4,15 +4,15 @@ const projectsData = [
         title: "Optimización de Core Web Vitals",
         date: "Rediseño de bloques clave • -32% CLS en 36 categorías • 100 creatividades implementadas",
         tags: ["Photoshop", "Code", "CMS", "UX/UI"],
-        image: "https://i.ibb.co/k2NgXR0t/Proyecto-nuevo.webp",
-        url: "https://www.instagram.com/p/BoG1KwmjvpE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        image: "https://i.ibb.co/KH49vnQ/Bifold-Brochure.png",
+        url: "#"
     },
     {
         id: 2,
         title: "Rediseño de entregable final a cliente",
         date: "Mockup + info de pedido • Preparado para automatización • Iniciativa propia",
         tags: ["Illustrator", "Markdown"],
-        image: "https://i.ibb.co/XkkQdwd7/Bifold-Brochure.webp",
+        image: "https://i.ibb.co/TMG1XmTN/Gemini-Generated-Image-qn5vdqn5vdqn5vdq.png",
         url: "#"
     },
     {
@@ -21,7 +21,7 @@ const projectsData = [
         date: "Arquitectura con marketing • Diseño responsive • Implementación en CMS",
         tags: ["UX/UI", "CMS"],
         image: "https://i.ibb.co/wZYzCX0S/Gemini-Generated-Image-qn5vdqn5vdqn5vdq.webp",
-        url: "https://www.behance.net/gallery/222703457/Invitaciones-de-Boda-Personalizadas"
+        url: "#"
     },
     {
         id: 4,
@@ -34,7 +34,7 @@ const projectsData = [
     {
         id: 5,
         title: "Case Study Obsessive",
-        date: "2024",
+        date: "Aanálisis heurístico y de usabilidad del producto. Estudio y propuesta de rediseño.",
         tags: ["UX/UI"],
         image: "https://i.ibb.co/5W24ScZV/obsessive-Portada.jpg",
         url: "https://www.behance.net/gallery/222701735/UXUI-Review-Obsessive-Product-Page"
@@ -42,7 +42,7 @@ const projectsData = [
     {
         id: 6,
         title: "Diseño Interfaz Home",
-        date: "2022",
+        date: "Diseño de home page para tienda online. Diseño de estructura e interfaz.",
         tags: ["UX/UI"],
         image: "https://i.ibb.co/PNc7C6B/tomsent.webp",
         url: "https://www.figma.com/proto/L9eeBr5ImruAxz4YKNGVrD/Untitled?node-id=4-96&t=vIzhLOGKr01ANPyO-1"
