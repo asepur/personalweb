@@ -1,6 +1,8 @@
 import './cv.css';
+import '../../styles/variables.css'
 import ScrollFloat from '../atoms/ScrollFloat';
 import JobCard from '../molecules/JobCard';
+
 
 function Cv() {
   // Datos de proyectos freelance
@@ -88,7 +90,7 @@ function Cv() {
 
               <div className="project-card__skills">
                 {project.skills.map((skill, index) => (
-                  <span key={index} className="skill-tag">{skill}</span>
+                  <span key={index} className="tag--default">{skill}</span>
                 ))}
               </div>
             </article>
