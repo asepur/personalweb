@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './ProjectCard.css';
+import '../../styles/variables.css';
 
 const ProjectCard = ({ title, date, tags, image, url }) => {
   return (
@@ -12,14 +13,13 @@ const ProjectCard = ({ title, date, tags, image, url }) => {
       <div className="project__card--image" style={{ backgroundImage: `url(${image})` }} />
       
       <div className="project__card--content">
-        <h3 className="project__card--title">{title}</h3>
-        <p className="project__card--date">{date}</p>
-
         <div className="project__card--tags">
           {tags.map((tag, index) => (
-            <span key={index} className="project__card--tag">{tag}</span>
+            <span key={index} className="tag--default">{tag}</span>
           ))}
         </div>
+        <h3 className="project__card--title">{title}</h3>
+        <p className="project__card--date">{date}</p>
       </div>
     </a>
   );
