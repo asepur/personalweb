@@ -1,16 +1,29 @@
 import { FiArrowRight } from "react-icons/fi"; // Para la flecha
 import './MyStacks.css'
+import '../../src/styles/variables.css'
 
 
 const tools = [
   {
     name: "Figma",
-    description: "Interface Design Tool",
+    description: "Diseño de Interfaces y Experiencias",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/500px-Figma-logo.svg.png",
     link: "https://www.figma.com/"
   },
   {
+    name: "PostHog",
+    description: "Análisis de Producto y UX",
+    icon: "https://store-images.s-microsoft.com/image/apps.29332.512b1d3d-80ec-4aec-83bb-411008d2f7cd.76371b6f-9386-463f-bfb0-b75cffb86a4f.bd99f4b1-b18e-4380-aa79-93768763c90d.png",
+    link: "https://clarity.microsoft.com/"
+},
+  {
     name: "Microsoft Clarity",
+    description: "User Study Behavior y CRO",
+    icon: "https://store-images.s-microsoft.com/image/apps.29332.512b1d3d-80ec-4aec-83bb-411008d2f7cd.76371b6f-9386-463f-bfb0-b75cffb86a4f.bd99f4b1-b18e-4380-aa79-93768763c90d.png",
+    link: "https://clarity.microsoft.com/"
+},
+{
+    name: "n8n",
     description: "User Study Behavior y CRO",
     icon: "https://store-images.s-microsoft.com/image/apps.29332.512b1d3d-80ec-4aec-83bb-411008d2f7cd.76371b6f-9386-463f-bfb0-b75cffb86a4f.bd99f4b1-b18e-4380-aa79-93768763c90d.png",
     link: "https://clarity.microsoft.com/"
@@ -22,7 +35,7 @@ const tools = [
     link: "https://www.notion.com/es-es"
   },
   {
-    name: "Slack",
+    name: "Looker Studio",
     description: "Software comunicación de equipos.",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png",
     link: "https://slack.com/intl/es-es/"
