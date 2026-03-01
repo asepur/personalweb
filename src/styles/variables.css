@@ -33,7 +33,7 @@
   --text-7xl: calc(var(--text-base) * 6);     /* 96px */
   
   /* ===== PALETA DE COLORES - MODO OSCURO (PREDETERMINADO) ===== */
-  /* Primarios (morados) */
+  /* Primarios (accento) */
   --color-primary-50: #FEF5F5;
   --color-primary-100: #FEEBEB;
   --color-primary-200: #FDD3D3;
@@ -235,15 +235,14 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: var(--text-5xl);
-  font-family: var(--font-heading);
-  font-weight: 500;
-  line-height: 1.3;
-  margin-bottom: var(--space-4);
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
 }
 
 h4, .h4 {
-  font-size: var(--text-2xl);
+  font-size: 20px;
   font-family: var(--font-body);
   font-weight: 600;
   line-height: 1.35;
@@ -321,4 +320,125 @@ p {
   --theme-transition: background-color var(--transition-base),
                       color var(--transition-base),
                       border-color var(--transition-base);
+}
+
+/* ===== TAG ===== */
+.tag--default{
+  background: var(--color-neutral-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(  --color-neutral-0);
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 2rem;
+  border: 1px solid var(--color-background-terciary);
+}
+
+.metodologia {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.metodologia__points {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh; /* Espacio para el efecto scroll */
+  position: relative;
+  width: 100%;
+}
+
+.metodologia__points--box {
+  background-color: var(--color-neutral-950);
+  border-radius: 24px;
+  padding: 3rem 3rem 3rem 6rem; /* Margen izquierdo interno para el número */
+  
+  /* CÁLCULO CLAVE: */
+  /* Si el padre es 1200px, limitamos el ancho de la caja para que al desplazarse 
+     no se "amontone" visualmente. */
+  min-height: 200px;
+  
+  position: sticky;
+  top: 15vh;
+  
+  border: 2px solid var(--color-neutral-600);
+}
+
+/* --- ESCALONADO HORIZONTAL DENTRO DE 1200PX --- */
+/* Usamos valores fijos de 'left' para asegurar que el número 01, 02 siempre se vea. */
+
+.metodologia__points--box:nth-child(1) { 
+  left: 0; 
+  z-index: 1; 
+}
+
+.metodologia__points--box:nth-child(2) { 
+  /* Se mueve 100px a la derecha respecto al inicio del contenedor */
+  left: 100px; 
+  z-index: 2; 
+}
+
+.metodologia__points--box:nth-child(3) { 
+  /* Se mueve 200px a la derecha respecto al inicio del contenedor */
+  left: 200px; 
+  z-index: 3; 
+}
+
+.metodologia__points--box:nth-child(4) { 
+  /* Se mueve 200px a la derecha respecto al inicio del contenedor */
+  left: 300px; 
+  z-index: 4; 
+}
+
+.metodologia__points--box:nth-child(5) { 
+  /* Se mueve 200px a la derecha respecto al inicio del contenedor */
+  left: 400px; 
+  z-index: 5; 
+}
+
+/* --- ESTILO DEL NÚMERO --- */
+.box__number {
+  position: absolute;
+  left: 2rem;
+  top: 3.5rem;
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-accent, #ff4d4d);
+  opacity: 0.8;
+}
+
+.box__content h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #fff;
+}
+
+.box__content p {
+  color: var(--color-neutral-300);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* --- HOVER --- */
+.metodologia__points--box:hover {
+  transform: translateY(-5px);
+}
+
+.topProjects{
+  padding: 12px 24px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.topProjects__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+.topProjects .project__card--image{
+  height: 300px;
 }
